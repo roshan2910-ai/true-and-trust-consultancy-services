@@ -1,0 +1,1158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>True & Trust Consultancy Services — Tax, Legal, Insurance & Loan Services (Pan-India)</title>
+  <meta name="description" content="True & Trust Consultancy Services — Chartered Accountants, Advocates, Insurance Advisors & Loan Experts. Pan-India digital services, secure payments, verified professionals." />
+  <meta name="author" content="True & Trust Consultancy Services" />
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"True & Trust Consultancy Services",
+    "url":"https://yourdomain.com",
+    "logo":"https://yourdomain.com/assets/img/logo.png",
+    "description":"One-stop CA, Legal, Insurance and Loan services across India. Trusted professionals, secure payments and WhatsApp support.",
+    "telephone":"+918448371753",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mayur Vihar Phase 1, Patparganj",
+      "addressLocality": "Delhi",
+      "postalCode": "110091",
+      "addressCountry": "IN"
+    },
+    "areaServed":"IN"
+  }
+  </script>
+
+  <!-- ====== Styles (All in one) ====== -->
+  <style>
+  /* ---------- THEME ---------- */
+  :root{
+    --bg:#f6f9ff;
+    --white:#ffffff;
+    --accent:#0b63d9;            /* royal blue */
+    --accent-2:#063a8a;          /* dark navy */
+    --muted:#6b7280;
+    --card-shadow: 0 12px 40px rgba(11,26,60,0.06);
+    --glass: rgba(255,255,255,0.85);
+    --radius:12px;
+    --maxw:1280px;
+    --gap:20px;
+    --ff:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;font-family:var(--ff);background:linear-gradient(180deg,#f4f8ff,var(--bg));color:#07102a;-webkit-font-smoothing:antialiased;line-height:1.55;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+  /* ---------- HEADER ---------- */
+  header.site-header{
+    position:sticky;top:12px;z-index:9999;
+    margin:12px 0;padding:12px 18px;border-radius:14px;background:transparent;transition:all .28s ease;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:none;
+  }
+  header.site-header.solid{background:var(--white);box-shadow:var(--card-shadow)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img.logo{height:56px;width:56px;border-radius:10px;background:#fff;padding:6px;object-fit:contain}
+  .brand .title{font-weight:800;font-size:18px}
+  .brand .sub{font-size:12px;color:var(--muted)}
+  nav.main-nav{display:flex;align-items:center;gap:12px}
+  .nav-left{display:flex;gap:8px;align-items:center}
+  .nav-right{display:flex;gap:8px;align-items:center}
+  .nav-item{position:relative}
+  .nav-link{padding:8px 12px;border-radius:8px;font-weight:700;color:#07102a}
+  .nav-link:hover{background:#eef6ff}
+  .dropdown{position:absolute;left:0;top:calc(100% + 8px);min-width:220px;background:var(--white);border-radius:8px;box-shadow:0 8px 20px rgba(2,28,80,0.08);overflow:hidden;display:none}
+  .dropdown a{display:block;padding:10px 12px;font-weight:600;color:#0b2540}
+  .nav-item:hover .dropdown{display:block}
+  .cta{display:flex;gap:8px;align-items:center}
+  .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:800}
+  .btn.secondary{background:transparent;border:1px solid rgba(11,99,217,0.12);color:var(--accent-2)}
+  .helpline{font-size:13px;color:var(--muted);padding:6px 10px;border-radius:8px}
+
+  /* mobile header */
+  .hamburger{display:none;border:0;background:transparent;font-size:22px;cursor:pointer}
+  @media(max-width:980px){
+    .nav-left{display:none}
+    .hamburger{display:block}
+    header.site-header{padding:10px}
+  }
+
+  /* ---------- HERO (full-screen slider) ---------- */
+  .hero-wrap{position:relative;margin-top:10px;border-radius:14px;overflow:hidden;min-height:calc(100vh - 160px);display:flex;align-items:center}
+  .hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,99,217,0.06),rgba(6,58,138,0.03));z-index:0}
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 420px;gap:28px;padding:48px;align-items:center}
+  @media(max-width:980px){ .hero-inner{grid-template-columns:1fr;padding:28px 18px} }
+
+  .hero-left{max-width:780px}
+  .kicker{display:inline-block;background:rgba(11,99,217,0.08);color:var(--accent-2);padding:8px 12px;border-radius:999px;font-weight:800;margin-bottom:12px}
+  .hero-title{font-size:44px;line-height:1.02;margin:8px 0 14px;font-weight:900}
+  @media(max-width:980px){ .hero-title{font-size:28px} }
+  .hero-sub{color:var(--muted);font-size:16px;max-width:66ch;margin-bottom:18px}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+
+  /* slider visuals */
+  .hero-slider{position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#fff,#f7fbff);box-shadow:var(--card-shadow);border:1px solid rgba(10,30,80,0.03)}
+  .slides{display:flex;transition:transform .8s cubic-bezier(.2,.9,.2,1)}
+  .slide{min-width:100%;display:flex;gap:16px;align-items:center;padding:22px}
+  .slide .content{flex:1}
+  .slide .visual{flex:0 0 420px;display:flex;align-items:center;justify-content:center}
+  .visual .imgbox{width:100%;height:280px;border-radius:12px;background:linear-gradient(135deg,#eaf4ff,#fff);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--accent-2)}
+  .slide h3{margin:0 0 8px;font-size:20px}
+  .slide p{margin:0;color:var(--muted)}
+  .slider-controls{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;display:flex;gap:8px}
+  .dot{width:12px;height:12px;border-radius:50%;background:rgba(10,20,40,0.08);cursor:pointer}
+  .dot.active{background:var(--accent)}
+
+  /* ---------- SERVICES GRID ---------- */
+  .services{margin-top:28px}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .service-card{background:var(--white);padding:18px;border-radius:12px;box-shadow:var(--card-shadow);border:1px solid rgba(11,99,217,0.04);display:flex;flex-direction:column;gap:10px;transition:transform .22s,box-shadow .22s}
+  .service-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(11,26,60,0.08)}
+  .service-card .icon{height:56px;width:56px;border-radius:12px;background:linear-gradient(180deg,#eef7ff,#ffffff);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--accent-2)}
+  .service-card h4{margin:0}
+  .service-card p{margin:0;color:var(--muted);font-size:14px}
+  .service-card .svc-cta{margin-top:auto;display:flex;gap:8px;align-items:center}
+
+  /* ---------- WHY CHOOSE US ---------- */
+  .why{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:980px){ .why{grid-template-columns:1fr} }
+  .why .why-card{background:var(--white);padding:16px;border-radius:12px;box-shadow:var(--card-shadow);display:flex;gap:12px;align-items:flex-start}
+  .why .why-card .ic{height:46px;width:46px;border-radius:10px;background:#eef6ff;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent-2)}
+  .why h3{margin:0}
+
+  /* ---------- COMPANY INTRO (long) ---------- */
+  .about{margin-top:28px;display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+  @media(max-width:980px){ .about{grid-template-columns:1fr} }
+  .about .text p{color:var(--muted);margin-top:8px}
+  .about .stats{display:flex;gap:12px;margin-top:12px}
+  .about .stat{background:var(--white);padding:12px;border-radius:10px;box-shadow:var(--card-shadow);text-align:center;min-width:120px}
+
+  /* ---------- TIMELINE / PROCESS ---------- */
+  .timeline{margin-top:28px;background:linear-gradient(180deg,#fff,#fbfdff);padding:16px;border-radius:12px;box-shadow:var(--card-shadow)}
+  .timeline .steps{display:flex;gap:12px;align-items:center;justify-content:space-between}
+  @media(max-width:980px){ .timeline .steps{flex-direction:column;align-items:stretch} }
+  .step{flex:1;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 20px rgba(2,20,60,0.04);text-align:center}
+  .step .num{font-weight:900;color:var(--accent-2);font-size:18px}
+
+  /* ---------- PER-VERTICAL PROCESS (tabs) ---------- */
+  .process-tabs{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+  .tab-btn{padding:8px 12px;border-radius:8px;background:transparent;border:1px solid rgba(11,99,217,0.06);cursor:pointer;font-weight:700}
+  .tab-btn.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff}
+
+  .process-detail{margin-top:12px;background:var(--white);padding:14px;border-radius:10px;box-shadow:var(--card-shadow)}
+
+  /* ---------- TESTIMONIALS CAROUSEL ---------- */
+  .testimonials{margin-top:28px}
+  .test-slider{display:flex;gap:12px;overflow:hidden;padding:6px}
+  .test-card{min-width:360px;background:linear-gradient(180deg,#fff,#f8fbff);padding:16px;border-radius:12px;box-shadow:var(--card-shadow)}
+  .stars{color:#f5a623}
+
+  /* ---------- PRICING ---------- */
+  .pricing{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(max-width:980px){ .pricing{grid-template-columns:1fr} }
+  .price-card{background:var(--white);padding:18px;border-radius:12px;box-shadow:var(--card-shadow);text-align:center;transition:transform .2s}
+  .price-card:hover{transform:translateY(-8px)}
+  .price-card .price{font-weight:900;color:var(--accent-2);font-size:22px;margin-top:8px}
+  .price-card .features{color:var(--muted);margin-top:8px;text-align:left}
+
+  /* ---------- FAQ ACCORDION ---------- */
+  .faq{margin-top:28px;background:linear-gradient(180deg,#fff,#fbfdff);padding:18px;border-radius:12px;box-shadow:var(--card-shadow)}
+  .faq .qa{border-bottom:1px solid rgba(10,20,40,0.04);padding:12px 0}
+  .faq .q{display:flex;justify-content:space-between;cursor:pointer;font-weight:800}
+  .faq .a{margin-top:8px;color:var(--muted);display:none}
+
+  /* ---------- BLOG / RESOURCES ---------- */
+  .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:18px}
+  .blog-card{background:var(--white);padding:12px;border-radius:10px;box-shadow:var(--card-shadow)}
+
+  /* ---------- COUNTERS ---------- */
+  .counters{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+  .counter{flex:1;background:#fff;padding:12px;border-radius:10px;box-shadow:var(--card-shadow);text-align:center}
+
+  /* ---------- NEWSLETTER ---------- */
+  .newsletter{margin-top:18px;padding:16px;border-radius:12px;background:linear-gradient(90deg,#fff,#f8fbff);box-shadow:var(--card-shadow);display:flex;align-items:center;gap:12px}
+  @media(max-width:980px){ .newsletter{flex-direction:column;align-items:stretch} }
+
+  /* ---------- FOOTER ---------- */
+  footer.site-footer{margin-top:28px;background:linear-gradient(180deg,#07102a,#051026);color:#cfe6ff;padding:26px;border-radius:12px;box-shadow:0 20px 60px rgba(2,12,30,0.18)}
+  .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px}
+  @media(max-width:980px){ .footer-grid{grid-template-columns:1fr 1fr} }
+
+  /* ---------- FLOAT BUTTONS ---------- */
+  .float-wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;box-shadow:0 12px 40px rgba(2,20,60,0.14);z-index:9999}
+  .help-widget{position:fixed;right:92px;bottom:18px;background:var(--white);padding:12px;border-radius:12px;box-shadow:0 12px 40px rgba(2,20,60,0.12);display:flex;flex-direction:column;gap:12px;z-index:9999}
+
+  /* small utilities */
+  .muted{color:var(--muted)}
+  .center{text-align:center}
+  .hr{height:1px;background:linear-gradient(90deg,transparent,#e6eef8,transparent);margin:18px 0;border-radius:4px}
+  </style>
+
+  <!-- ====== Small inline config - set your WhatsApp here (country code + number, no '+') ====== -->
+  <script>
+    window.BUSINESS_WHATSAPP = ''; // e.g. '919999999999' — leave empty to use displayed helpline
+    window.RAZORPAY_KEY = ''; // placeholder for future integration
+  </script>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <div class="container">
+    <header class="site-header" id="siteHeader" role="banner" aria-label="Top navigation">
+      <div class="brand" aria-hidden="false">
+        <img src="/assets/img/logo.png" alt="True & Trust logo" class="logo"/>
+        <div>
+          <div class="title">True & Trust Consultancy</div>
+          <div class="sub muted">Pan-India • Launched Jan 2025</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" role="navigation" aria-label="Main menu">
+        <!-- Left nav (desktop multi-row) -->
+        <div class="nav-left">
+          <div class="nav-item">
+            <a class="nav-link" href="/services.html">Services ▾</a>
+            <div class="dropdown" role="menu" aria-label="Services menu">
+              <a href="/ca.html">Tax & CA Services</a>
+              <a href="/advocate.html">Advocate & Legal</a>
+              <a href="/insurance.html">Insurance Services</a>
+              <a href="/loan.html">Loan Services</a>
+              <a href="/accounting.html">Accounting & Bookkeeping</a>
+            </div>
+          </div>
+          <a class="nav-link" href="/pricing.html">Pricing</a>
+          <a class="nav-link" href="/testimonials.html">Testimonials</a>
+          <a class="nav-link" href="/resources.html">Resources</a>
+        </div>
+
+        <!-- Right CTAs -->
+        <div class="nav-right cta">
+          <div class="helpline">Helpline: <strong>+91 8448 371753</strong></div>
+          <button class="btn" onclick="openWhatsApp('General Enquiry','')">Get Started</button>
+          <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" onclick="toggleMobile()">☰</button>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <!-- MOBILE PANEL -->
+  <div id="mobilePanel" style="display:none;position:fixed;left:12px;right:12px;top:84px;background:#fff;border-radius:12px;padding:12px;box-shadow:0 20px 60px rgba(2,28,80,0.12);z-index:999;">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <a href="/services.html">Services</a>
+      <a href="/ca.html">CA Services</a>
+      <a href="/advocate.html">Advocate</a>
+      <a href="/insurance.html">Insurance</a>
+      <a href="/loan.html">Loan</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- ========== HERO / ROTATIONAL BANNER ========== -->
+  <section class="hero-wrap" role="region" aria-label="Main hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <div class="container hero-inner" role="article">
+      <div class="hero-left">
+        <div class="kicker">Trusted • Verified • Pan-India</div>
+        <h1 class="hero-title">Smart GST, ITR & Compliance Solutions for Your Business</h1>
+        <p class="hero-sub">Expert CA, legal, insurance & loan advisors — remote support, secure payments and fast turnarounds. Book consultations, register your business, or apply for loans — all online with verified professionals.</p>
+
+        <div class="hero-ctas">
+          <button class="btn" onclick="openWhatsApp('Consult Now','')">Consult Now</button>
+          <button class="btn secondary" onclick="location.href='/ca.html'">Register GST</button>
+          <button class="btn secondary" onclick="location.href='/services.html#itrs'">File ITR</button>
+        </div>
+
+        <!-- Quick trust badges -->
+        <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+          <div style="background:#fff;padding:8px 12px;border-radius:999px;box-shadow:0 8px 20px rgba(2,20,60,0.04)">✔️ 10,000+ clients</div>
+          <div style="background:#fff;padding:8px 12px;border-radius:999px;box-shadow:0 8px 20px rgba(2,20,60,0.04)">✔️ Pan-India</div>
+          <div style="background:#fff;padding:8px 12px;border-radius:999px;box-shadow:0 8px 20px rgba(2,20,60,0.04)">✔️ Secure Payments</div>
+        </div>
+      </div>
+
+      <div class="hero-slider" aria-hidden="false">
+        <div class="slides" id="slides" style="transform:translateX(0%)">
+          <!-- Slide 1: Tax & Compliance -->
+          <div class="slide" role="group" aria-label="Smart GST and ITR">
+            <div class="content">
+              <h3>Smart GST, ITR & Compliance Solutions</h3>
+              <p class="muted">From GST registration to monthly reconciliation and ITR filing — our expert CA team keeps your business compliant and audit-ready.</p>
+              <div style="margin-top:12px"><button class="btn" onclick="location.href='/services.html#tax'">Explore Tax Services</button></div>
+            </div>
+            <div class="visual">
+              <div class="imgbox">[Hero Image: Tax & GST]</div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Legal / Advocate -->
+          <div class="slide" role="group" aria-label="Legal services and representation">
+            <div class="content">
+              <h3>Trusted Legal & Advocate Support</h3>
+              <p class="muted">Book advocate consultations, contract drafting, representation and corporate legal advisory with experienced lawyers.</p>
+              <div style="margin-top:12px"><button class="btn" onclick="location.href='/advocate.html'">Book Advocate Consult</button></div>
+            </div>
+            <div class="visual">
+              <div class="imgbox">[Hero Image: Legal & Advocate]</div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Insurance & Loans -->
+          <div class="slide" role="group" aria-label="Insurance and loan advisory">
+            <div class="content">
+              <h3>Insurance & Loan Guidance — Fast Approvals</h3>
+              <p class="muted">Compare policies, get claim assistance or check loan eligibility with dedicated advisors and lender partnerships.</p>
+              <div style="margin-top:12px"><button class="btn" onclick="location.href='/insurance.html'">Compare Policies</button></div>
+            </div>
+            <div class="visual">
+              <div class="imgbox">[Hero Image: Insurance & Loans]</div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Business Advisory (optional) -->
+          <div class="slide" role="group" aria-label="Business advisory">
+            <div class="content">
+              <h3>Business Advisory & Startup Support</h3>
+              <p class="muted">Company formation, startup legal structuring and ongoing advisory to scale with confidence.</p>
+              <div style="margin-top:12px"><button class="btn" onclick="location.href='/services.html#startup'">Startup Support</button></div>
+            </div>
+            <div class="visual">
+              <div class="imgbox">[Hero Image: Business Advisory]</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- controls -->
+        <div class="slider-controls" id="sliderControls" role="tablist">
+          <div class="dot active" data-index="0" tabindex="0" role="button" aria-pressed="true" aria-label="Slide 1"></div>
+          <div class="dot" data-index="1" tabindex="0" role="button" aria-pressed="false" aria-label="Slide 2"></div>
+          <div class="dot" data-index="2" tabindex="0" role="button" aria-pressed="false" aria-label="Slide 3"></div>
+          <div class="dot" data-index="3" tabindex="0" role="button" aria-pressed="false" aria-label="Slide 4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES GRID (8-12 cards) ========== -->
+  <div class="container">
+    <section class="services" aria-labelledby="servicesHeading">
+      <h2 id="servicesHeading">Our Services</h2>
+      <p class="muted">Full-service offerings across tax, legal, insurance and loans. Click a card for details or request a callback.</p>
+
+      <div class="services-grid" id="servicesGrid" style="margin-top:12px">
+        <!-- Each card includes icon, title, 3-line description and CTAs -->
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">GST</div>
+            <div>
+              <h4>GST Registration & Returns</h4>
+              <p class="muted">Register your business for GST, file monthly returns and handle audits with expert guidance.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="location.href='/services.html#gst'">Get Started</button>
+            <button class="btn secondary" onclick="openWhatsApp('GST Registration','')">Enquire</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🧾</div>
+            <div>
+              <h4>Income Tax Return (ITR) Filing</h4>
+              <p class="muted">Comprehensive ITR filing for salaried, self-employed, HUFs, partnerships and companies.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="location.href='/services.html#itr'">File ITR</button>
+            <button class="btn secondary" onclick="openWhatsApp('ITR Filing','')">Enquire</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">TDS</div>
+            <div>
+              <h4>TDS Compliance</h4>
+              <p class="muted">TDS filing, challan reconciliation and annual statements handled precisely.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="location.href='/services.html#tds'">View</button>
+            <button class="btn secondary" onclick="openWhatsApp('TDS Compliance','')">Enquire</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🏛️</div>
+            <div>
+              <h4>Company / Startup Registration</h4>
+              <p class="muted">Company incorporation, MCA filings, DSC & DIN support for startups and small businesses.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="location.href='/services.html#company'">Register</button>
+            <button class="btn secondary" onclick="openWhatsApp('Company Registration','')">Enquire</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">📚</div>
+            <div>
+              <h4>Accounting & Bookkeeping</h4>
+              <p class="muted">Regular bookkeeping, monthly MIS, reconciliation and accounting advisory.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="location.href='/services.html#accounting'">Explore</button>
+            <button class="btn secondary" onclick="openWhatsApp('Bookkeeping','')">Enquire</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🛡️</div>
+            <div>
+              <h4>Insurance Services</h4>
+              <p class="muted">Health, life, motor & business insurance comparisons, purchase assistance & claim support.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="location.href='/insurance.html'">Compare</button>
+            <button class="btn secondary" onclick="openWhatsApp('Insurance Quote','')">Get Quote</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🏦</div>
+            <div>
+              <h4>Loan Services</h4>
+              <p class="muted">Business loans, working capital, personal & home loan assistance with lender follow-up.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="location.href='/loan.html'">Apply</button>
+            <button class="btn secondary" onclick="openWhatsApp('Loan Services','')">Check Eligibility</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">TM</div>
+            <div>
+              <h4>Trademark Registration</h4>
+              <p class="muted">Trademark search, filing and prosecution with timeline tracking.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="location.href='/services.html#trademark'">Protect</button>
+            <button class="btn secondary" onclick="openWhatsApp('Trademark','')">Enquire</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">MSME</div>
+            <div>
+              <h4>MSME Registration</h4>
+              <p class="muted">Registration support, subsidy guidance and MSME benefits advisory.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="location.href='/services.html#msme'">Register</button>
+            <button class="btn secondary" onclick="openWhatsApp('MSME Registration','')">Enquire</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">📈</div>
+            <div>
+              <h4>Business Consultancy</h4>
+              <p class="muted">Financial & strategic advisory for growth, compliance and fundraising preparedness.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="location.href='/services.html#business'">Consult</button>
+            <button class="btn secondary" onclick="openWhatsApp('Business Consultancy','')">Enquire</button>
+          </div>
+        </article>
+
+        <!-- placeholder for expansion -->
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">＋</div>
+            <div>
+              <h4>More Services</h4>
+              <p class="muted">Easily add more services — payroll, compliance packs, succession planning etc.</p>
+            </div>
+          </div>
+          <div class="svc-cta">
+            <button class="btn" onclick="alert('Feature to add new service slots via admin')">Add</button>
+            <button class="btn secondary" onclick="openWhatsApp('Add Service','')">Discuss</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== PER-SERVICE PACK ROWS (space for multiple package cards) ========== -->
+    <!-- CA PACKAGES ROW -->
+    <section class="svc-row" aria-labelledby="caRow" style="margin-top:28px" id="caPackages">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="caRow">CA Service Packages</h3>
+        <a class="muted" href="/ca.html">View all CA services</a>
+      </div>
+      <div class="cards" id="cards-ca" style="display:flex;gap:12px;overflow:auto;padding:12px 0">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <!-- ADVOCATE PACKAGES ROW -->
+    <section class="svc-row" aria-labelledby="advRow" style="margin-top:16px" id="advPackages">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="advRow">Advocate Packages</h3>
+        <a class="muted" href="/advocate.html">View all Legal services</a>
+      </div>
+      <div class="cards" id="cards-adv" style="display:flex;gap:12px;overflow:auto;padding:12px 0"></div>
+    </section>
+
+    <!-- INSURANCE PACKAGES ROW -->
+    <section class="svc-row" aria-labelledby="insRow" style="margin-top:16px" id="insPackages">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="insRow">Insurance Offers & Plans</h3>
+        <a class="muted" href="/insurance.html">View Insurance options</a>
+      </div>
+      <div class="cards" id="cards-ins" style="display:flex;gap:12px;overflow:auto;padding:12px 0"></div>
+    </section>
+
+    <!-- LOAN PACKAGES ROW -->
+    <section class="svc-row" aria-labelledby="loanRow" style="margin-top:16px" id="loanPackages">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="loanRow">Loan Solutions</h3>
+        <a class="muted" href="/loan.html">View Loan services</a>
+      </div>
+      <div class="cards" id="cards-loan" style="display:flex;gap:12px;overflow:auto;padding:12px 0"></div>
+    </section>
+
+    <!-- ========== FEATURED PACKAGES ========== -->
+    <section id="featured" style="margin-top:28px">
+      <h2>Featured Packages</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px">
+        <div class="price-card" style="text-align:left">
+          <div style="font-weight:900">CA Starter</div>
+          <div class="muted" style="margin-top:6px">ITR filing + basic advisory</div>
+          <div class="price">₹499</div>
+          <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" onclick="openWhatsApp('Buy','CA Starter')">Buy</button><a class="btn secondary" href="/pricing.html">More</a></div>
+        </div>
+        <div class="price-card" style="text-align:left">
+          <div style="font-weight:900">Legal Consultation</div>
+          <div class="muted" style="margin-top:6px">60-minute consult with advocate</div>
+          <div class="price">₹799</div>
+          <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" onclick="openWhatsApp('Buy','Legal Consultation')">Book</button><a class="btn secondary" href="/advocate.html">More</a></div>
+        </div>
+        <div class="price-card" style="text-align:left">
+          <div style="font-weight:900">Insurance Quote</div>
+          <div class="muted" style="margin-top:6px">Personalized policy comparison</div>
+          <div class="price">₹199</div>
+          <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" onclick="openWhatsApp('Buy','Insurance Quote')">Get Quote</button><a class="btn secondary" href="/insurance.html">More</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="why" style="margin-top:28px" aria-label="Why choose us">
+      <div class="why-card">
+        <div class="ic">✔</div>
+        <div>
+          <div style="font-weight:900">100% Trusted & Verified</div>
+          <div class="muted">Professionals verified with credentials & local checks.</div>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="ic">🧑‍💼</div>
+        <div>
+          <div style="font-weight:900">Expert CA / Advocate Team</div>
+          <div class="muted">Experienced professionals handling complex matters.</div>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="ic">⚡</div>
+        <div>
+          <div style="font-weight:900">Fast & Hassle-Free</div>
+          <div class="muted">Digital first approach — upload documents, track status, receive results.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COMPANY INTRO (lengthy) ========== -->
+    <section class="about" style="margin-top:28px">
+      <div class="text">
+        <h2>About True & Trust</h2>
+        <p>True & Trust Consultancy Services was founded with the simple mission of making professional financial and legal services accessible and reliable for every business and individual across India. Our team combines experienced Chartered Accountants, advocates, insurance advisors and loan specialists to deliver integrated solutions for compliance, protection, and growth.</p>
+        <p>We work with early-stage startups, MSMEs, established firms and individuals — providing personalized plans that match your business size and complexity. Our onboarding includes verification of credentials, clear timelines, and continuous status updates via WhatsApp and email.</p>
+        <p>We believe in transparency: fixed pricing for common services, straightforward retainers for ongoing legal work, and a clear escalation path for any disputes. Over the years, we have helped thousands of clients file taxes, register businesses, defend legal matters and secure financing.</p>
+
+        <div class="stats" style="margin-top:12px">
+          <div class="stat">
+            <div style="font-weight:900;font-size:20px">10,000+</div>
+            <div class="muted">Clients Served</div>
+          </div>
+          <div class="stat">
+            <div style="font-weight:900;font-size:20px">500+</div>
+            <div class="muted">Legal Matters Resolved</div>
+          </div>
+          <div class="stat">
+            <div style="font-weight:900;font-size:20px">95%</div>
+            <div class="muted">Loan Assistance Success</div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div style="background:var(--white);padding:12px;border-radius:12px;box-shadow:var(--card-shadow)">
+          <div style="font-weight:900">Our Promise</div>
+          <div class="muted" style="margin-top:8px">Verified professionals, clear pricing and end-to-end delivery. We never ask for hidden fees and provide follow-up support after service completion.</div>
+          <div style="margin-top:12px"><button class="btn" onclick="openWhatsApp('About Enquiry','')">Talk to Advisor</button></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ========== TIMELINE / PROCESS ========== -->
+    <section class="timeline" aria-label="Process timeline" style="margin-top:28px">
+      <h3>How It Works — Simple 4-step process</h3>
+      <div class="steps" style="margin-top:12px">
+        <div class="step">
+          <div class="num">1</div>
+          <div style="font-weight:800;margin-top:8px">Upload Documents</div>
+          <div class="muted" style="margin-top:6px">Securely upload required documents via the portal or WhatsApp.</div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div style="font-weight:800;margin-top:8px">Our Team Processes It</div>
+          <div class="muted" style="margin-top:6px">Assigned CA/Advocate reviews and prepares the filings.</div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div style="font-weight:800;margin-top:8px">Verification & Follow-up</div>
+          <div class="muted" style="margin-top:6px">We follow up with authorities and keep you updated.</div>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <div style="font-weight:800;margin-top:8px">Delivery</div>
+          <div class="muted" style="margin-top:6px">Receive documents & final approval via email and WhatsApp.</div>
+        </div>
+      </div>
+
+      <!-- Per-vertical process tabs -->
+      <div style="margin-top:12px">
+        <div class="process-tabs" role="tablist" aria-label="Process tabs">
+          <button class="tab-btn active" data-tab="tax">Tax / Compliance</button>
+          <button class="tab-btn" data-tab="legal">Legal / Advocate</button>
+          <button class="tab-btn" data-tab="insurance">Insurance</button>
+          <button class="tab-btn" data-tab="loan">Loan</button>
+        </div>
+
+        <div class="process-detail" id="processDetail">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS CAROUSEL ========== -->
+    <section class="testimonials" style="margin-top:28px">
+      <h3>What Our Clients Say</h3>
+      <div class="test-slider" id="testSlider" aria-live="polite" style="margin-top:12px">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <!-- ========== PRICING PLANS ========== -->
+    <section class="pricing" style="margin-top:28px">
+      <h3>Pricing Plans</h3>
+      <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+        <div class="price-card">
+          <div style="font-weight:900">Basic</div>
+          <div class="muted">Essential services</div>
+          <div class="price">₹499</div>
+          <div class="features" style="margin-top:8px">
+            <div class="muted">• ITR filing</div>
+            <div class="muted">• Email support</div>
+            <div class="muted">• 3-day turnaround</div>
+          </div>
+          <div style="margin-top:12px"><button class="btn" onclick="openWhatsApp('Buy','Basic')">Buy</button></div>
+        </div>
+
+        <div class="price-card">
+          <div style="font-weight:900">Standard</div>
+          <div class="muted">Most popular</div>
+          <div class="price">₹1,499</div>
+          <div class="features" style="margin-top:8px">
+            <div class="muted">• GST + ITR bundle</div>
+            <div class="muted">• 7-day turnaround</div>
+            <div class="muted">• Phone support</div>
+          </div>
+          <div style="margin-top:12px"><button class="btn" onclick="openWhatsApp('Buy','Standard')">Buy</button></div>
+        </div>
+
+        <div class="price-card">
+          <div style="font-weight:900">Premium</div>
+          <div class="muted">Full service</div>
+          <div class="price">₹6,999</div>
+          <div class="features" style="margin-top:8px">
+            <div class="muted">• Audit & filing support</div>
+            <div class="muted">• Dedicated CA</div>
+            <div class="muted">• Priority support</div>
+          </div>
+          <div style="margin-top:12px"><button class="btn" onclick="openWhatsApp('Buy','Premium')">Buy</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ (accordion) ========== -->
+    <section class="faq" style="margin-top:28px">
+      <h3>Frequently Asked Questions</h3>
+
+      <!-- many questions (10-15) -->
+      <div class="qa" id="q1">
+        <div class="q">What documents are required to file ITR?<span class="muted">+</span></div>
+        <div class="a muted">PAN, Aadhaar, Form 16 (if salaried), bank statements, investment proof, interest documents. For businesses: P&L and balance sheet.</div>
+      </div>
+
+      <div class="qa" id="q2">
+        <div class="q">How long does GST registration take?<span class="muted">+</span></div>
+        <div class="a muted">Typically 3-7 working days after submission of documents, depending on verification timelines.</div>
+      </div>
+
+      <div class="qa" id="q3">
+        <div class="q">Can you represent in court for legal cases?<span class="muted">+</span></div>
+        <div class="a muted">Yes — our partner advocates provide representation in civil & criminal matters across many jurisdictions. Contact us for location-specific availability.</div>
+      </div>
+
+      <div class="qa" id="q4">
+        <div class="q">How do I file an insurance claim?<span class="muted">+</span></div>
+        <div class="a muted">We help prepare claim documents, submit claims and follow up with insurers. Use 'File a claim' to get started.</div>
+      </div>
+
+      <div class="qa" id="q5">
+        <div class="q">What documents are required for a loan application?<span class="muted">+</span></div>
+        <div class="a muted">ID, address proof, income proof, bank statements, KYC and property documents (for home loans). Specifics vary by lender.</div>
+      </div>
+
+      <div class="qa" id="q6">
+        <div class="q">Do you offer monthly retainers for legal support?<span class="muted">+</span></div>
+        <div class="a muted">Yes — we offer retainer packages covering tax & legal advisory. Contact sales for a tailored plan.</div>
+      </div>
+
+      <div class="qa" id="q7">
+        <div class="q">Are online payments secure?<span class="muted">+</span></div>
+        <div class="a muted">Yes — we use Razorpay integration (when enabled) to process payments securely with digital receipts.</div>
+      </div>
+
+      <div class="qa" id="q8">
+        <div class="q">How do I upload confidential documents?<span class="muted">+</span></div>
+        <div class="a muted">We recommend encrypted transfers (HTTPS). For production, we integrate secure cloud storage (S3 / R2) and role-based access control.</div>
+      </div>
+
+      <div class="qa" id="q9">
+        <div class="q">What are your service coverage areas?<span class="muted">+</span></div>
+        <div class="a muted">Pan-India coverage with remote delivery. For in-person representation we use our partner network in major cities.</div>
+      </div>
+
+      <div class="qa" id="q10">
+        <div class="q">How do I cancel a service or request a refund?<span class="muted">+</span></div>
+        <div class="a muted">Refunds depend on service terms and work completed. Contact support for assistance and dispute resolution.</div>
+      </div>
+
+      <!-- expand: more FAQ items can be added similarly -->
+    </section>
+
+    <!-- ========== BLOG / RESOURCES ========== -->
+    <section style="margin-top:28px">
+      <h3>Latest Insights</h3>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <img src="/assets/img/blog-1.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px">
+          <h4 style="margin-top:8px">How to File ITR for Freelancers</h4>
+          <p class="muted">Step-by-step guide for income declaration, deductions and tax-saving tips.</p>
+        </article>
+        <article class="blog-card">
+          <img src="/assets/img/blog-2.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px">
+          <h4 style="margin-top:8px">GST Registration Checklist</h4>
+          <p class="muted">Documents required and common mistakes to avoid during GST onboarding.</p>
+        </article>
+        <article class="blog-card">
+          <img src="/assets/img/blog-3.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px">
+          <h4 style="margin-top:8px">Choosing the Right Business Insurance</h4>
+          <p class="muted">Compare policies for SMEs and what to watch in the fine print.</p>
+        </article>
+        <article class="blog-card">
+          <img src="/assets/img/blog-4.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px">
+          <h4 style="margin-top:8px">Loan Eligibility: Documents Checklist</h4>
+          <p class="muted">Prepare faster disbursals by having complete documentation ready.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== CLIENT LOGOS / COUNTERS ========== -->
+    <section style="margin-top:28px">
+      <h3>Trusted by Businesses</h3>
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px">
+        <!-- placeholder logos -->
+        <div style="background:#fff;padding:12px;border-radius:8px;box-shadow:var(--card-shadow);min-width:120px;text-align:center">Client A</div>
+        <div style="background:#fff;padding:12px;border-radius:8px;box-shadow:var(--card-shadow);min-width:120px;text-align:center">Client B</div>
+        <div style="background:#fff;padding:12px;border-radius:8px;box-shadow:var(--card-shadow);min-width:120px;text-align:center">Client C</div>
+        <div style="background:#fff;padding:12px;border-radius:8px;box-shadow:var(--card-shadow);min-width:120px;text-align:center">Client D</div>
+      </div>
+
+      <div class="counters" style="margin-top:18px">
+        <div class="counter"><div style="font-weight:900;font-size:20px" data-count="10000">0</div><div class="muted">Clients</div></div>
+        <div class="counter"><div style="font-weight:900;font-size:20px" data-count="750">0</div><div class="muted">Professionals</div></div>
+        <div class="counter"><div style="font-weight:900;font-size:20px" data-count="95">0</div><div class="muted">Loan success %</div></div>
+        <div class="counter"><div style="font-weight:900;font-size:20px" data-count="500">0</div><div class="muted">Legal matters</div></div>
+      </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section style="margin-top:28px">
+      <div class="newsletter">
+        <div>
+          <div style="font-weight:900">Get timely tax & legal reminders</div>
+          <div class="muted" style="margin-top:6px">Subscribe for newsletters, updates and deadlines.</div>
+        </div>
+        <form id="newsletterForm" style="display:flex;gap:8px;align-items:center">
+          <input id="newsletterEmail" type="email" placeholder="Your email address" required style="padding:10px;border-radius:8px;border:1px solid rgba(11,26,60,0.04);min-width:260px" />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== CTA STRIP ========== -->
+    <section style="margin-top:28px;background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:18px;border-radius:12px;color:#fff;box-shadow:var(--card-shadow)">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:900">Need help now?</div>
+          <div style="opacity:0.95;margin-top:6px">Start a WhatsApp chat with our expert team — quick responses and guided onboarding.</div>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button class="btn" onclick="openWhatsApp('Emergency Help','')">Chat on WhatsApp</button>
+          <a class="btn secondary" href="/contact.html">Contact Form</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer" style="margin-top:28px">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img src="/assets/img/logo.png" alt="logo" style="height:56px;width:56px;border-radius:8px;object-fit:cover" />
+            <div style="font-weight:900;margin-top:8px">True & Trust Consultancy</div>
+            <div class="muted" style="margin-top:6px">Mayur Vihar Phase 1, Patparganj, Delhi - 110091</div>
+            <div class="muted" style="margin-top:6px">Email: support@trueandtrustconsultancyservices.in</div>
+            <div class="muted" style="margin-top:6px">Helpline: +91 8448 371753</div>
+          </div>
+
+          <div>
+            <h4 style="margin-top:0;color:#cfe6ff">Services</h4>
+            <ul style="list-style:none;padding:0;margin:6px 0 0;color:#cfe6ff">
+              <li><a href="/ca.html">CA Services</a></li>
+              <li><a href="/advocate.html">Advocate Services</a></li>
+              <li><a href="/insurance.html">Insurance</a></li>
+              <li><a href="/loan.html">Loan Services</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="margin-top:0;color:#cfe6ff">Quick Links</h4>
+            <ul style="list-style:none;padding:0;margin:6px 0 0;color:#cfe6ff">
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/testimonials.html">Testimonials</a></li>
+              <li><a href="/resources.html">Resources</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="margin-top:0;color:#cfe6ff">Partners</h4>
+            <div class="muted" style="margin-top:6px">Bank & NBFC partners, Insurance companies — logos can be added here.</div>
+            <div style="margin-top:10px;display:flex;gap:8px">
+              <a href="#" style="color:#cfe6ff">Facebook</a>
+              <a href="#" style="color:#cfe6ff">LinkedIn</a>
+              <a href="#" style="color:#cfe6ff">X</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;border-top:1px solid rgba(255,255,255,0.06);padding-top:12px;color:#cfe6ff;text-align:center;font-size:13px">
+          © True & Trust Consultancy Services — 2025. All rights reserved. | <a href="/privacy.html">Privacy</a> • <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- FLOATING WHATSAPP & HELP WIDGET -->
+  <a class="float-wa" id="floatWA" href="#" title="WhatsApp">WA</a>
+  <div class="help-widget" id="helpWidget" style="display:flex;flex-direction:column;gap:8px">
+    <div style="font-weight:900">Quick Contact</div>
+    <div class="muted">WhatsApp • Email • Helpline</div>
+    <div style="display:flex;gap:8px">
+      <button class="btn" style="flex:1" onclick="openWhatsApp('Quick Contact','')">WhatsApp</button>
+      <a class="btn secondary" style="flex:1;text-align:center" href="/contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- ==================== JS: interactions ==================== -->
+  <script>
+  (function(){
+    /* ---------- header solid on scroll ---------- */
+    const header = document.getElementById('siteHeader');
+    function checkHeader(){
+      if (window.scrollY > 40) header.classList.add('solid'); else header.classList.remove('solid');
+    }
+    checkHeader();
+    window.addEventListener('scroll', checkHeader);
+
+    /* ---------- mobile panel ---------- */
+    const mobilePanel = document.getElementById('mobilePanel');
+    window.toggleMobile = function(){
+      if (!mobilePanel) return;
+      mobilePanel.style.display = (mobilePanel.style.display === 'block') ? 'none' : 'block';
+    };
+    document.addEventListener('click', function(e){
+      if (!mobilePanel) return;
+      if (!mobilePanel.contains(e.target) && e.target.id !== 'hamburgerBtn') mobilePanel.style.display = 'none';
+    });
+
+    /* ---------- hero slider ---------- */
+    const slides = document.getElementById('slides');
+    const dots = Array.from(document.querySelectorAll('.dot'));
+    let idx = 0, slideCount = slides.children.length, sliderInterval = null;
+    function go(i){
+      idx = (i + slideCount) % slideCount;
+      slides.style.transform = 'translateX(-' + (idx*100) + '%)';
+      dots.forEach((d,di)=>{ d.classList.toggle('active', di===idx); d.setAttribute('aria-pressed', di===idx?'true':'false')});
+    }
+    function next(){ go(idx+1); }
+    dots.forEach(d => d.addEventListener('click', ()=>{ stop(); go(Number(d.dataset.index)); start(); }));
+    function start(){ sliderInterval = setInterval(next, 5500); }
+    function stop(){ if (sliderInterval) { clearInterval(sliderInterval); sliderInterval = null; } }
+    start();
+    // pause on hover
+    document.querySelectorAll('.hero-slider').forEach(el=>{
+      el.addEventListener('mouseenter', stop);
+      el.addEventListener('mouseleave', start);
+    });
+
+    /* ---------- service rows: demo data populated --------- */
+    const demo = {
+      ca: [
+        {id:'ca1',title:'ITR Filing - Individual',desc:'Complete ITR preparation & filing with error checks.',price:499,img:'/assets/img/svc-ca-1.jpg'},
+        {id:'ca2',title:'GST Annual Return',desc:'GST reconciliation & annual filing support.',price:1499,img:'/assets/img/svc-ca-2.jpg'},
+        {id:'ca3',title:'Tax Audit',desc:'Tax audit for small businesses.',price:6999,img:'/assets/img/svc-ca-3.jpg'}
+      ],
+      adv: [
+        {id:'adv1',title:'Legal Consultation',desc:'60-min discussion with senior advocate.',price:799,img:'/assets/img/svc-adv-1.jpg'},
+        {id:'adv2',title:'Contract Drafting',desc:'Custom contracts & agreement drafting.',price:2999,img:'/assets/img/svc-adv-2.jpg'}
+      ],
+      ins: [
+        {id:'ins1',title:'Health Insurance Quote',desc:'Compare family & individual plans.',price:199,img:'/assets/img/svc-ins-1.jpg'},
+        {id:'ins2',title:'Group Employee Policy',desc:'Group cover for small business employees.',price:999,img:'/assets/img/svc-ins-2.jpg'}
+      ],
+      loan: [
+        {id:'loan1',title:'Personal Loan Assist',desc:'Eligibility check & fast application.',price:299,img:'/assets/img/svc-loan-1.jpg'},
+        {id:'loan2',title:'Home Loan Advisory',desc:'Pre-approval guidance & docs.',price:999,img:'/assets/img/svc-loan-2.jpg'}
+      ]
+    };
+
+    function mkPackageCard(item){
+      const div = document.createElement('div');
+      div.className = 'pkg-card';
+      div.style.minWidth = '260px';
+      div.innerHTML = `
+        <div style="height:120px;overflow:hidden;border-radius:8px;background:#f7fbff"><img src="${item.img}" alt="${item.title}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+        <div style="font-weight:800;margin-top:8px">${item.title}</div>
+        <div style="color:var(--muted);margin-top:6px">${item.desc}</div>
+        <div style="font-weight:900;color:var(--accent-2);margin-top:8px">₹${item.price}</div>
+        <div style="margin-top:8px;display:flex;gap:8px"><button class="btn" onclick="openWhatsApp('${item.title}','Buy')">Buy</button><button class="btn secondary" onclick="location.href='/contact.html'">Contact</button></div>
+      `;
+      return div;
+    }
+
+    function populateServiceRows(){
+      ['ca','adv','ins','loan'].forEach(key=>{
+        const container = document.getElementById('cards-' + key);
+        if (!container) return;
+        demo[key].forEach(item => container.appendChild(mkPackageCard(item)));
+      });
+    }
+    populateServiceRows();
+
+    /* ---------- testimonials (auto-populate) --------- */
+    const testSlider = document.getElementById('testSlider');
+    const testimonials = [
+      {name:'Ravi K., Delhi', role:'Startup Owner', text:'True & Trust made GST registration painless. CA handled everything remotely and saved us time.', rating:5},
+      {name:'Priya S., Lucknow', role:'Freelancer', text:'Loan assistance was fast — document follow-up was professional. Highly recommended.', rating:5},
+      {name:'Amit P., Bengaluru', role:'SME', text:'Legal drafting and contract negotiation was precise and affordable.', rating:5}
+    ];
+    function mkTestCard(t){
+      const div = document.createElement('div');
+      div.className='test-card';
+      const stars = '★'.repeat(t.rating) + '☆'.repeat(5-t.rating);
+      div.innerHTML = `<div style="font-weight:800">${t.name} <span style="color:var(--muted);font-weight:600">· ${t.role}</span></div><div class="stars" style="margin-top:8px">${stars}</div><p class="muted" style="margin-top:8px">${t.text}</p>`;
+      return div;
+    }
+    testimonials.forEach(t=> testSlider.appendChild(mkTestCard(t)));
+
+    // auto-scroll testimonials
+    let tpos = 0;
+    setInterval(()=>{ tpos = (tpos+1) % Math.max(1, testSlider.children.length); testSlider.scrollTo({left: tpos * 380, behavior:'smooth'}); }, 4500);
+
+    /* ---------- FAQ accordion ---------- */
+    document.querySelectorAll('.faq .qa').forEach(node=>{
+      const q = node.querySelector('.q');
+      const a = node.querySelector('.a');
+      q.addEventListener('click', ()=>{
+        const open = a.style.display === 'block';
+        // close all
+        document.querySelectorAll('.faq .a').forEach(x=>x.style.display='none');
+        if (!open) a.style.display = 'block';
+      });
+    });
+
+    /* ---------- process tabs ---------- */
+    const processDetail = document.getElementById('processDetail');
+    const processMap = {
+      tax:`<h4>Tax & Compliance Flow</h4>
+        <ol>
+          <li><strong>Upload documents:</strong> PAN, bank statements, invoices, books.</li>
+          <li><strong>Processing:</strong> Reconciliation, tax planning & return preparation.</li>
+          <li><strong>Filing:</strong> E-file returns and share receipts.</li>
+          <li><strong>Support:</strong> 30-day follow-up for notices.</li>
+        </ol>`,
+      legal:`<h4>Legal / Advocate Flow</h4>
+        <ol>
+          <li><strong>Book consultation:</strong> Share case summary and documents.</li>
+          <li><strong>Assessment:</strong> Advocate reviews & suggests strategy.</li>
+          <li><strong>Representation:</strong> Filing, drafting & court representation.</li>
+          <li><strong>Closure:</strong> Case settlement / judgement & documentation.</li>
+        </ol>`,
+      insurance:`<h4>Insurance & Claims</h4>
+        <ol>
+          <li><strong>Compare:</strong> We compare policies from multiple insurers.</li>
+          <li><strong>Purchase:</strong> Assist in buying and completing KYC.</li>
+          <li><strong>Claim support:</strong> Help prepare & follow up claims.</li>
+        </ol>`,
+      loan:`<h4>Loan Processing</h4>
+        <ol>
+          <li><strong>Eligibility check:</strong> Preliminary assessment.</li>
+          <li><strong>Document packing:</strong> Prepare file & submit to lenders.</li>
+          <li><strong>Follow-up:</strong> Liaise with bank/NBFC until disbursal.</li>
+        </ol>`
+    };
+    document.querySelectorAll('.tab-btn').forEach(btn=>{
+      btn.addEventListener('click', function(){
+        document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+        this.classList.add('active');
+        processDetail.innerHTML = processMap[this.dataset.tab] || '';
+      });
+    });
+    // init
+    processDetail.innerHTML = processMap['tax'];
+
+    /* ---------- counters animation ---------- */
+    function animateCounters(){
+      document.querySelectorAll('.counter [data-count]').forEach(el=>{
+        const target = +el.dataset.count;
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 80));
+        const int = setInterval(()=>{
+          current += step;
+          if (current >= target){ el.textContent = target; clearInterval(int); } else el.textContent = current;
+        }, 20);
+      });
+    }
+    // start when visible
+    let countersStarted = false;
+    window.addEventListener('scroll', function(){
+      const c = document.querySelector('.counters');
+      if (c && !countersStarted){
+        const rect = c.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100){ animateCounters(); countersStarted = true; }
+      }
+    });
+
+    /* ---------- populate service package rows (reuse earlier demo items) ---------- */
+    function appendTo(containerId, items){
+      const cont = document.getElementById(containerId);
+      if (!cont) return;
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'pkg-card';
+        card.style.minWidth = '260px';
+        card.innerHTML = `<div style="height:120px;overflow:hidden;border-radius:8px;background:#f7fbff"><img src="${item.img}" alt="${item.title}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div style="font-weight:800;margin-top:8px">${item.title}</div>
+          <div style="color:var(--muted);margin-top:6px">${item.desc}</div>
+          <div style="font-weight:900;color:var(--accent-2);margin-top:8px">₹${item.price}</div>
+          <div style="margin-top:8px;display:flex;gap:8px"><button class="btn" onclick="openWhatsApp('${item.title}','Buy')">Buy</button><button class="btn secondary" onclick="location.href='/contact.html'">Contact</button></div>`;
+        cont.appendChild(card);
+      });
+    }
+    appendTo('cards-ca', demo.ca);
+    appendTo('cards-adv', demo.adv);
+    appendTo('cards-ins', demo.ins);
+    appendTo('cards-loan', demo.loan);
+
+    /* ---------- newsletter form ---------- */
+    const nlForm = document.getElementById('newsletterForm');
+    if (nlForm){
+      nlForm.addEventListener('submit', e=>{
+        e.preventDefault();
+        const email = document.getElementById('newsletterEmail').value;
+        if (!email) return alert('Enter a valid email');
+        alert('Thanks! Subscribed: ' + email);
+        nlForm.reset();
+      });
+    }
+
+    /* ---------- simple openWhatsApp helper ---------- */
+    function normalizePhone(p){ return (p||'').toString().replace(/[^0-9]/g,''); }
+    window.openWhatsApp = function(service, pkg){
+      const phone = normalizePhone(window.BUSINESS_WHATSAPP || '+918448371753');
+      let text = 'Hello True & Trust Consultancy Services.%0A';
+      if (service) text += 'Service: ' + service + '%0A';
+      if (pkg) text += 'Package: ' + pkg + '%0A';
+      text += 'I would like to enquire. Please contact me.';
+      if (!phone) { alert('WhatsApp number not configured'); return; }
+      window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(decodeURIComponent(text)), '_blank');
+    };
+
+    // wire floating buttons
+    document.getElementById('floatWA').addEventListener('click', function(e){ e.preventDefault(); openWhatsApp('Quick Chat',''); });
+    document.getElementById('helpWidget') && document.getElementById('helpWidget').addEventListener('click', function(){ openWhatsApp('Quick Contact',''); });
+
+    /* ---------- accessibility improvements ---------- */
+    // allow keyboard for dots
+    document.querySelectorAll('.dot').forEach(d => d.addEventListener('keydown', function(e){ if (e.key === 'Enter') d.click(); }));
+
+    /* ---------- final debug helpers ---------- */
+    window._ttcs = { goToSlide: go, openWhatsApp: openWhatsApp };
+
+  })();
+  </script>
+
+  <!-- End -->
+</body>
+</html>

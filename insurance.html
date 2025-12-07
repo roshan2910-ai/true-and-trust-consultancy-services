@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Insurance Services — True & Trust Consultancy Services | Policy Advice & Claims Assistance</title>
+  <meta name="description" content="True & Trust — Insurance Services: health, life, motor, business & group insurance. Policy comparison, claims support & quick quotes across India." />
+  <meta name="author" content="True & Trust Consultancy Services" />
+
+  <!-- Schema.org InsuranceAgency -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"InsuranceAgency",
+    "name":"True & Trust Consultancy Services - Insurance",
+    "url":"https://yourdomain.com/insurance.html",
+    "logo":"https://yourdomain.com/assets/img/logo.png",
+    "telephone":"+918448371753",
+    "areaServed":"IN",
+    "serviceType":["Health Insurance","Life Insurance","Motor Insurance","Group Employee Insurance","Claims Assistance"]
+  }
+  </script>
+
+  <!-- INTERNAL CSS -->
+  <style>
+    :root{
+      --bg:#f6f9ff; --white:#ffffff; --accent:#0b63d9; --accent-2:#063a8a; --muted:#6b7280; --dark:#07102a;
+      --card-shadow:0 12px 40px rgba(11,26,60,0.06); --radius:12px; --maxw:1280px; --ff:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:var(--ff);background:linear-gradient(180deg,#f4f8ff,var(--bg));color:var(--dark);-webkit-font-smoothing:antialiased;line-height:1.55}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+    /* Header */
+    header.site-header{position:sticky;top:12px;z-index:9999;margin:12px 0;padding:12px 18px;border-radius:14px;background:transparent;transition:all .28s ease;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    header.site-header.solid{background:var(--white);box-shadow:var(--card-shadow)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img.logo{height:56px;width:56px;border-radius:10px;background:#fff;padding:6px;object-fit:contain}
+    .brand .title{font-weight:800;font-size:18px}
+    .brand .sub{font-size:12px;color:var(--muted)}
+    nav.main-nav{display:flex;align-items:center;gap:12px}
+    .nav-left{display:flex;gap:8px;align-items:center}
+    .nav-right{display:flex;gap:8px;align-items:center}
+    .nav-item{position:relative}
+    .nav-link{padding:8px 12px;border-radius:8px;font-weight:700;color:var(--dark)}
+    .nav-link:hover{background:#eef6ff}
+    .dropdown{position:absolute;left:0;top:calc(100% + 8px);min-width:220px;background:var(--white);border-radius:8px;box-shadow:0 8px 20px rgba(2,28,80,0.08);overflow:hidden;display:none}
+    .dropdown a{display:block;padding:10px 12px;font-weight:600;color:var(--dark)}
+    .nav-item:hover .dropdown{display:block}
+    .cta{display:flex;gap:8px;align-items:center}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:800}
+    .btn.secondary{background:transparent;border:1px solid rgba(11,99,217,0.12);color:var(--accent-2)}
+    .helpline{font-size:13px;color:var(--muted);padding:6px 10px;border-radius:8px}
+    .hamburger{display:none;border:0;background:transparent;font-size:22px;cursor:pointer}
+    @media(max-width:980px){ .nav-left{display:none} .hamburger{display:block} header.site-header{padding:10px} }
+
+    /* HERO: left info + right quote form */
+    .hero{margin-top:10px;display:grid;grid-template-columns:1fr 420px;gap:22px;align-items:start}
+    @media(max-width:1100px){ .hero{grid-template-columns:1fr 360px} }
+    @media(max-width:900px){ .hero{grid-template-columns:1fr;padding:0 18px} .hero-right{order:2} }
+    .hero-left{background:linear-gradient(180deg,#fff,#f7fbff);padding:22px;border-radius:12px;box-shadow:var(--card-shadow);border:1px solid rgba(11,99,217,0.03)}
+    .kicker{display:inline-block;background:rgba(11,99,217,0.08);color:var(--accent-2);padding:8px 12px;border-radius:999px;font-weight:800;margin-bottom:12px}
+    .hero-title{font-size:32px;line-height:1.06;margin:6px 0 12px;font-weight:900}
+    .hero-sub{color:var(--muted);font-size:15px;max-width:66ch;margin-bottom:14px}
+    .hero-features{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .feature-pill{background:#fff;padding:8px 12px;border-radius:999px;box-shadow:0 8px 30px rgba(2,20,60,0.04);font-weight:700;color:var(--accent-2)}
+
+    .hero-right{background:var(--white);padding:18px;border-radius:12px;box-shadow:var(--card-shadow);border:1px solid rgba(11,99,217,0.03)}
+    .form-row{display:flex;gap:8px}
+    input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(11,26,60,0.06);font-size:14px}
+    label{font-weight:700;font-size:13px;margin-bottom:6px;display:block}
+    .small-muted{font-size:13px;color:var(--muted)}
+
+    /* services grid */
+    .section{margin-top:22px}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .service-card{background:var(--white);padding:18px;border-radius:12px;box-shadow:var(--card-shadow);border:1px solid rgba(11,99,217,0.04);display:flex;flex-direction:column;gap:10px;transition:transform .22s,box-shadow .22s}
+    .service-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(11,26,60,0.08)}
+    .service-card .icon{height:56px;width:56px;border-radius:12px;background:linear-gradient(180deg,#eef7ff,#ffffff);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--accent-2)}
+    .service-card h4{margin:0}
+    .service-card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* packages */
+    .svc-row{margin-top:18px;padding:12px;background:linear-gradient(180deg,#fff,#fbfdff);border-radius:12px;box-shadow:var(--card-shadow)}
+    .cards{display:flex;gap:12px;overflow:auto;padding-bottom:6px}
+    .pkg-card{min-width:260px;background:#fff;border-radius:10px;padding:14px;box-shadow:0 8px 24px rgba(2,20,60,0.04);border:1px solid rgba(10,30,80,0.03);display:flex;flex-direction:column;gap:8px}
+
+    /* long text */
+    .long-text{background:var(--white);padding:16px;border-radius:10px;box-shadow:var(--card-shadow);margin-top:12px}
+    .muted{color:var(--muted)}
+    .hr{height:1px;background:linear-gradient(90deg,transparent,#e6eef8,transparent);margin:18px 0;border-radius:4px}
+
+    /* timeline */
+    .timeline{margin-top:18px;background:linear-gradient(180deg,#fff,#fbfdff);padding:16px;border-radius:12px;box-shadow:var(--card-shadow)}
+    .steps{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    @media(max-width:980px){ .steps{flex-direction:column} }
+    .step{flex:1;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 20px rgba(2,20,60,0.04);text-align:center}
+
+    /* testimonials */
+    .test-slider{display:flex;gap:12px;overflow:hidden;padding:6px;margin-top:12px}
+    .test-card{min-width:360px;background:linear-gradient(180deg,#fff,#f8fbff);padding:16px;border-radius:12px;box-shadow:var(--card-shadow)}
+
+    /* pricing */
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    @media(max-width:980px){ .pricing{grid-template-columns:1fr} }
+    .price-card{background:var(--white);padding:18px;border-radius:12px;box-shadow:var(--card-shadow);text-align:center;transition:transform .2s}
+    .price-card:hover{transform:translateY(-8px)}
+
+    /* FAQ */
+    .faq{margin-top:18px;background:linear-gradient(180deg,#fff,#fbfdff);padding:18px;border-radius:12px;box-shadow:var(--card-shadow)}
+    .qa{border-bottom:1px solid rgba(10,20,40,0.04);padding:12px 0}
+    .q{display:flex;justify-content:space-between;cursor:pointer;font-weight:800}
+    .a{margin-top:8px;color:var(--muted);display:none}
+
+    /* blog */
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+
+    /* counters */
+    .counters{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .counter{flex:1;background:#fff;padding:12px;border-radius:10px;box-shadow:var(--card-shadow);text-align:center}
+
+    /* newsletter & footer */
+    .newsletter{margin-top:18px;padding:16px;border-radius:12px;background:linear-gradient(90deg,#fff,#f8fbff);box-shadow:var(--card-shadow);display:flex;align-items:center;gap:12px}
+    @media(max-width:980px){ .newsletter{flex-direction:column;align-items:stretch} }
+    footer.site-footer{margin-top:28px;background:linear-gradient(180deg,#07102a,#051026);color:#cfe6ff;padding:26px;border-radius:12px;box-shadow:0 20px 60px rgba(2,12,30,0.18)}
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px}
+    @media(max-width:980px){ .footer-grid{grid-template-columns:1fr 1fr} }
+
+    /* float */
+    .float-wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;box-shadow:0 12px 40px rgba(2,20,60,0.14);z-index:9999}
+    .help-widget{position:fixed;right:92px;bottom:18px;background:var(--white);padding:12px;border-radius:12px;box-shadow:0 12px 40px rgba(2,20,60,0.12);display:flex;flex-direction:column;gap:12px;z-index:9999}
+  </style>
+
+  <!-- small inline config -->
+  <script>window.BUSINESS_WHATSAPP = ''; window.RAZORPAY_KEY = '';</script>
+</head>
+<body>
+  <!-- HEADER -->
+  <div class="container">
+    <header class="site-header" id="siteHeader" role="banner" aria-label="Top navigation">
+      <div class="brand">
+        <img src="/assets/img/logo.png" alt="True & Trust logo" class="logo"/>
+        <div>
+          <div class="title">True & Trust Consultancy</div>
+          <div class="sub muted">Pan-India • Launched Jan 2025</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" role="navigation" aria-label="Main menu">
+        <div class="nav-left">
+          <div class="nav-item"><a class="nav-link" href="/services.html">Services ▾</a>
+            <div class="dropdown" role="menu" aria-label="Services menu">
+              <a href="/ca.html">Tax & CA Services</a>
+              <a href="/advocate.html">Advocate & Legal</a>
+              <a href="/insurance.html">Insurance Services</a>
+              <a href="/loan.html">Loan Services</a>
+              <a href="/accounting.html">Accounting & Bookkeeping</a>
+            </div>
+          </div>
+          <a class="nav-link" href="/pricing.html">Pricing</a>
+          <a class="nav-link" href="/testimonials.html">Testimonials</a>
+          <a class="nav-link" href="/resources.html">Resources</a>
+        </div>
+
+        <div class="nav-right cta">
+          <div class="helpline">Helpline: <strong>+91 8448 371753</strong></div>
+          <button class="btn" onclick="openWhatsApp('Insurance Enquiry','')">Get Quote</button>
+          <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" onclick="toggleMobile()">☰</button>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <!-- MOBILE PANEL -->
+  <div id="mobilePanel" style="display:none;position:fixed;left:12px;right:12px;top:84px;background:#fff;border-radius:12px;padding:12px;box-shadow:0 20px 60px rgba(2,28,80,0.12);z-index:999;">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <a href="/services.html">Services</a>
+      <a href="/ca.html">CA Services</a>
+      <a href="/advocate.html">Advocate</a>
+      <a href="/insurance.html">Insurance</a>
+      <a href="/loan.html">Loan</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- HERO: left info + right quick quote form -->
+  <section class="hero container" aria-label="Insurance hero">
+    <div class="hero-left">
+      <div class="kicker">Insurance & Claims Assistance</div>
+      <h1 class="hero-title">Compare, Buy & Claim — Health, Life, Motor & Business Insurance</h1>
+      <p class="hero-sub">We simplify insurance: compare policies from top insurers, get personalized recommendations, and receive hands-on claims assistance. Our advisors help you choose the best coverage for your needs and speed up claim settlements when required.</p>
+
+      <div class="hero-features">
+        <div class="feature-pill">✔ Policy Comparison</div>
+        <div class="feature-pill">✔ Claims Support</div>
+        <div class="feature-pill">✔ Group Employee Policies</div>
+        <div class="feature-pill">✔ Risk Assessment</div>
+      </div>
+
+      <div class="long-text" style="margin-top:12px">
+        <h3>How we help</h3>
+        <p class="muted">We partner with insurance providers and help you choose the right policy — whether individual health, family floater, term life, motor, or commercial property insurance. For claims, our advisors guide documentation, liaise with the insurer, and follow up proactively to maximise chances of a swift settlement.</p>
+
+        <h4 style="margin-top:12px">Insurance Services — details</h4>
+        <ul class="muted">
+          <li><strong>Health Insurance:</strong> Compare plans, portability, renewals, cashless network hospitals, and claims.</li>
+          <li><strong>Term Life:</strong> Cover selection, nominee setup and claim guidance.</li>
+          <li><strong>Motor Insurance:</strong> Comprehensive & third-party policies, NCB transfer and claims support.</li>
+          <li><strong>Business Insurance:</strong> Property, professional indemnity, cyber liability & employer liability.</li>
+          <li><strong>Group Policies:</strong> Employee health & group term life solutions.</li>
+          <li><strong>Claims Assistance:</strong> Document checklists, claim filing, insurer coordination & follow-ups.</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px;display:flex;gap:10px">
+        <button class="btn" onclick="openWhatsApp('Insurance Quote','')">Get Quote</button>
+        <a class="btn secondary" href="/contact.html">Contact Advisor</a>
+      </div>
+    </div>
+
+    <aside class="hero-right" aria-label="Quick quote form">
+      <div style="font-weight:900">Quick Insurance Quote</div>
+      <p class="small-muted" style="margin-top:6px">Share a few details and we’ll send tailored quotes via WhatsApp or email.</p>
+
+      <form id="quoteForm" style="margin-top:10px">
+        <div style="margin-bottom:8px">
+          <label for="iName">Full Name</label>
+          <input id="iName" name="name" type="text" placeholder="Your name" required />
+        </div>
+
+        <div style="display:flex;gap:8px">
+          <div style="flex:1">
+            <label for="iEmail">Email</label>
+            <input id="iEmail" name="email" type="email" placeholder="your@email.com" required />
+          </div>
+          <div style="flex:1">
+            <label for="iPhone">Phone</label>
+            <input id="iPhone" name="phone" type="tel" placeholder="10-digit mobile" required />
+          </div>
+        </div>
+
+        <div style="margin-top:8px">
+          <label for="iType">Policy Type</label>
+          <select id="iType" name="type">
+            <option>Health Insurance</option>
+            <option>Term Life</option>
+            <option>Motor Insurance</option>
+            <option>Business Insurance</option>
+            <option>Group Employee Policy</option>
+            <option>Claims Assistance</option>
+          </select>
+        </div>
+
+        <div style="margin-top:8px">
+          <label for="iMsg">Additional Info (optional)</label>
+          <textarea id="iMsg" name="message" rows="4" placeholder="Any details (family size, vehicle, sum insured)"></textarea>
+        </div>
+
+        <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
+          <button class="btn" type="submit">Request Quotes</button>
+          <button class="btn secondary" type="button" onclick="openWhatsApp('Insurance Quote Request','')">Chat on WhatsApp</button>
+        </div>
+
+        <div class="small-muted" style="margin-top:8px">We do not share personal data — see our privacy policy for details.</div>
+      </form>
+    </aside>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <div class="container">
+    <section class="section">
+      <h2>Insurance Solutions</h2>
+      <p class="muted">From individual to corporate insurance solutions — we simplify selection and claims so you get the protection you need.</p>
+
+      <div class="services-grid" style="margin-top:12px">
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🩺</div>
+            <div><h4>Health Insurance</h4><p class="muted">Individual, family floater, critical illness and corporate group health plans.</p></div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px">
+            <button class="btn" onclick="openWhatsApp('Health Insurance','')">Get Quote</button>
+            <button class="btn secondary" onclick="location.href='#claims'">Claims Help</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🪦</div>
+            <div><h4>Term Life Insurance</h4><p class="muted">Protect your family's future with affordable term plans and easy claims.</p></div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px">
+            <button class="btn" onclick="openWhatsApp('Term Life','')">Compare Plans</button>
+            <button class="btn secondary" onclick="location.href='/services.html'">More</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🚗</div>
+            <div><h4>Motor Insurance</h4><p class="muted">Comprehensive and third-party policies, NCB transfer and quick claim assistance.</p></div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px">
+            <button class="btn" onclick="openWhatsApp('Motor Insurance','')">Get Quote</button>
+            <button class="btn secondary" onclick="location.href='#claims'">Claims Support</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🏢</div>
+            <div><h4>Business Insurance</h4><p class="muted">Property, professional indemnity, cyber, and business interruption cover for SMEs.</p></div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px">
+            <button class="btn" onclick="openWhatsApp('Business Insurance','')">Talk to Advisor</button>
+            <button class="btn secondary" onclick="location.href='/services.html'">Details</button>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">👥</div>
+            <div><h4>Group Employee Policies</h4><p class="muted">Group health & term plans with employee benefits and onboarding support.</p></div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px">
+            <button class="btn" onclick="openWhatsApp('Group Policy','')">Get Quote</button>
+            <button class="btn secondary" onclick="location.href='/contact.html'">Contact Sales</button>
+          </div>
+        </article>
+
+        <article class="service-card" id="claims">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">📑</div>
+            <div><h4>Claims Assistance</h4><p class="muted">Document preparation, claim filing, and insurer follow-up until settlement.</p></div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px">
+            <button class="btn" onclick="openWhatsApp('Claims Assistance','')">Start Claim</button>
+            <button class="btn secondary" onclick="location.href='/resources.html'">Claim Guide</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PACKAGES ROW -->
+    <section class="svc-row" style="margin-top:22px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3>Quick Plans & Offers</h3>
+        <a class="muted" href="/pricing.html">View detailed plans</a>
+      </div>
+      <div class="cards" id="cards-ins" style="margin-top:12px"></div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why" style="margin-top:22px">
+      <div class="why-card"><div class="ic">✔</div><div><div style="font-weight:900">Insurer Partnerships</div><div class="muted">Access to multiple insurers for best pricing.</div></div></div>
+      <div class="why-card"><div class="ic">🛠️</div><div><div style="font-weight:900">Claims Support</div><div class="muted">We help with documentation and follow-ups to fasten settlements.</div></div></div>
+      <div class="why-card"><div class="ic">📈</div><div><div style="font-weight:900">Tailored Coverage</div><div class="muted">Policies matched to personal and business risk profiles.</div></div></div>
+    </section>
+
+    <!-- PROCESS TIMELINE -->
+    <section class="timeline" style="margin-top:22px">
+      <h3>How Insurance Assistance Works</h3>
+      <div class="steps" style="margin-top:12px">
+        <div class="step"><div style="font-weight:900">1. Share Requirement</div><div class="muted" style="margin-top:6px">Tell us via form or WhatsApp</div></div>
+        <div class="step"><div style="font-weight:900">2. Policy Comparison</div><div class="muted" style="margin-top:6px">We present best-fit plans & pricing</div></div>
+        <div class="step"><div style="font-weight:900">3. Purchase & Onboarding</div><div class="muted" style="margin-top:6px">We assist payment and policy issuance</div></div>
+        <div class="step"><div style="font-weight:900">4. Claims Assistance</div><div class="muted" style="margin-top:6px">Full support until settlement</div></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section style="margin-top:22px">
+      <h3>Customers — Insurance</h3>
+      <div class="test-slider" id="testSlider"></div>
+    </section>
+
+    <!-- PRICING -->
+    <section style="margin-top:22px">
+      <h3>Representative Pricing</h3>
+      <div class="pricing">
+        <div class="price-card"><div style="font-weight:900">Health Quick</div><div class="muted">Basic family floater</div><div style="font-weight:900;color:var(--accent-2);margin-top:8px">₹999 / yr</div><div style="margin-top:8px"><button class="btn" onclick="openWhatsApp('Buy','Health Quick')">Buy</button></div></div>
+        <div class="price-card"><div style="font-weight:900">Term Life</div><div class="muted">Affordable cover for family</div><div style="font-weight:900;color:var(--accent-2);margin-top:8px">₹499 / yr</div><div style="margin-top:8px"><button class="btn" onclick="openWhatsApp('Buy','Term Life')">Buy</button></div></div>
+        <div class="price-card"><div style="font-weight:900">Business bundle</div><div class="muted">Property + liability cover</div><div style="font-weight:900;color:var(--accent-2);margin-top:8px">Custom</div><div style="margin-top:8px"><button class="btn" onclick="openWhatsApp('Buy','Business Bundle')">Get Quote</button></div></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" style="margin-top:22px">
+      <h3>Insurance FAQs</h3>
+      <div class="qa"><div class="q">How do I file an insurance claim?<span class="muted">+</span></div><div class="a muted">Share policy details and documents; we will help prepare claim form and liaise with insurer for settlement.</div></div>
+      <div class="qa"><div class="q">Can I port my health insurance?<span class="muted">+</span></div><div class="a muted">Yes — portability is possible; we help with portability formalities and continuity benefits.</div></div>
+      <div class="qa"><div class="q">What documents are needed for claims?<span class="muted">+</span></div><div class="a muted">It depends on claim type; typically policy copy, identity, hospital bills, discharge summary and claim form.</div></div>
+      <div class="qa"><div class="q">How long do claims take?<span class="muted">+</span></div><div class="a muted">Timeline varies by insurer & claim type; cashless pre-authorization is faster; we track and follow-up until closure.</div></div>
+    </section>
+
+    <!-- BLOG -->
+    <section style="margin-top:22px">
+      <h3>Insurance Guides</h3>
+      <div class="blog-grid">
+        <article class="blog-card"><img src="/assets/img/blog-ins-1.jpg" alt="" style="height:140px;object-fit:cover;border-radius:8px"><h4 style="margin-top:8px">Choosing Health Cover</h4><p class="muted">Sum insured, network hospitals & co-pay explained.</p></article>
+        <article class="blog-card"><img src="/assets/img/blog-ins-2.jpg" alt="" style="height:140px;object-fit:cover;border-radius:8px"><h4 style="margin-top:8px">Claim Checklist</h4><p class="muted">Documents & step-by-step claim filing.</p></article>
+        <article class="blog-card"><img src="/assets/img/blog-ins-3.jpg" alt="" style="height:140px;object-fit:cover;border-radius:8px"><h4 style="margin-top:8px">Group Health for SMEs</h4><p class="muted">Benefits & administrative tips.</p></article>
+      </div>
+    </section>
+
+    <!-- COUNTERS & NEWSLETTER -->
+    <section style="margin-top:22px">
+      <div class="counters">
+        <div class="counter"><div style="font-weight:900;font-size:20px" data-count="5000">0</div><div class="muted">Policies Assisted</div></div>
+        <div class="counter"><div style="font-weight:900;font-size:20px" data-count="120">0</div><div class="muted">Insurer Partners</div></div>
+        <div class="counter"><div style="font-weight:900;font-size:20px" data-count="94">0</div><div class="muted">Claims Success %</div></div>
+      </div>
+
+      <div class="newsletter" style="margin-top:12px">
+        <div><div style="font-weight:900">Insurance tips & alerts</div><div class="muted" style="margin-top:6px">Subscribe for claim tips & policy reminders.</div></div>
+        <form id="newsletterForm" style="display:flex;gap:8px;align-items:center">
+          <input id="newsletterEmail" type="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid rgba(11,26,60,0.04);min-width:240px" />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="margin-top:22px;background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:18px;border-radius:12px;color:#fff">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div><div style="font-weight:900">Need help with a claim?</div><div style="opacity:0.95;margin-top:6px">Start a chat — our claims team will assist with documentation & submission.</div></div>
+        <div style="display:flex;gap:8px"><button class="btn" onclick="openWhatsApp('Claims Assistance','')">WhatsApp Now</button><a class="btn secondary" href="/contact.html">Contact Form</a></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" style="margin-top:28px">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img src="/assets/img/logo.png" alt="logo" style="height:56px;width:56px;border-radius:8px;object-fit:cover" />
+            <div style="font-weight:900;margin-top:8px">True & Trust Consultancy</div>
+            <div class="muted" style="margin-top:6px">Mayur Vihar Phase 1, Patparganj, Delhi - 110091</div>
+            <div class="muted" style="margin-top:6px">Email: support@trueandtrustconsultancyservices.in</div>
+            <div class="muted" style="margin-top:6px">Helpline: +91 8448 371753</div>
+          </div>
+
+          <div>
+            <h4 style="margin-top:0;color:#cfe6ff">Services</h4>
+            <ul style="list-style:none;padding:0;margin:6px 0 0;color:#cfe6ff">
+              <li><a href="/ca.html">CA Services</a></li>
+              <li><a href="/advocate.html">Advocate Services</a></li>
+              <li><a href="/insurance.html">Insurance</a></li>
+              <li><a href="/loan.html">Loan Services</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="margin-top:0;color:#cfe6ff">Quick Links</h4>
+            <ul style="list-style:none;padding:0;margin:6px 0 0;color:#cfe6ff">
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/testimonials.html">Testimonials</a></li>
+              <li><a href="/resources.html">Resources</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="margin-top:0;color:#cfe6ff">Partners</h4>
+            <div class="muted" style="margin-top:6px">Insurance companies & partners — logos can be added here.</div>
+            <div style="margin-top:10px;display:flex;gap:8px">
+              <a href="#" style="color:#cfe6ff">Facebook</a>
+              <a href="#" style="color:#cfe6ff">LinkedIn</a>
+              <a href="#" style="color:#cfe6ff">X</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;border-top:1px solid rgba(255,255,255,0.06);padding-top:12px;color:#cfe6ff;text-align:center;font-size:13px">
+          © True & Trust Consultancy Services — 2025. All rights reserved. | <a href="/privacy.html">Privacy</a> • <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- FLOATING WHATSAPP & HELP -->
+  <a class="float-wa" id="floatWA" href="#" title="WhatsApp">WA</a>
+  <div class="help-widget" id="helpWidget">
+    <div style="font-weight:900">Quick Contact</div>
+    <div class="muted">WhatsApp • Email • Helpline</div>
+    <div style="display:flex;gap:8px">
+      <button class="btn" style="flex:1" onclick="openWhatsApp('Quick Contact','')">WhatsApp</button>
+      <a class="btn secondary" style="flex:1;text-align:center" href="/contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- INTERNAL JS -->
+  <script>
+  (function(){
+    // header solid on scroll
+    const header = document.getElementById('siteHeader');
+    function checkHeader(){ if (window.scrollY > 40) header.classList.add('solid'); else header.classList.remove('solid'); }
+    checkHeader(); window.addEventListener('scroll', checkHeader);
+
+    // mobile panel toggle
+    const mobilePanel = document.getElementById('mobilePanel');
+    window.toggleMobile = function(){ if (!mobilePanel) return; mobilePanel.style.display = (mobilePanel.style.display === 'block') ? 'none' : 'block'; };
+    document.addEventListener('click', function(e){ if (!mobilePanel) return; if (!mobilePanel.contains(e.target) && e.target.id !== 'hamburgerBtn') mobilePanel.style.display = 'none'; });
+
+    // demo packages for insurance
+    const insDemo = [
+      {id:'ins1',title:'Family Health Plan',desc:'Family floater for 2 adults + children',price:999,img:'/assets/img/svc-ins-1.jpg'},
+      {id:'ins2',title:'Term Life Basic',desc:'Affordable term cover for family security',price:499,img:'/assets/img/svc-ins-2.jpg'},
+      {id:'ins3',title:'Business Property Cover',desc:'Property & contents cover for SMEs',price:1999,img:'/assets/img/svc-ins-3.jpg'}
+    ];
+    function mkPkg(item){
+      const div = document.createElement('div'); div.className='pkg-card';
+      div.innerHTML = `<div style="height:120px;overflow:hidden;border-radius:8px;background:#f7fbff"><img src="${item.img}" alt="${item.title}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+        <div style="font-weight:800;margin-top:8px">${item.title}</div>
+        <div style="color:var(--muted);margin-top:6px">${item.desc}</div>
+        <div style="font-weight:900;color:var(--accent-2);margin-top:8px">₹${item.price}</div>
+        <div style="margin-top:8px;display:flex;gap:8px"><button class="btn" onclick="openWhatsApp('${item.title}','Buy')">Buy</button><button class="btn secondary" onclick="location.href='/contact.html'">Contact</button></div>`;
+      return div;
+    }
+    const cardsIns = document.getElementById('cards-ins');
+    insDemo.forEach(d => cardsIns.appendChild(mkPkg(d)));
+
+    // testimonials
+    const testSlider = document.getElementById('testSlider');
+    const testimonials = [
+      {name:'Sunita R., Noida',role:'Client',text:'Great guidance and quick claim processing help',rating:5},
+      {name:'Anoop P., Jaipur',role:'Client',text:'Found a better health plan via True & Trust',rating:5},
+      {name:'Meera S., Kolkata',role:'HR',text:'Seamless group policy onboarding for our staff',rating:5}
+    ];
+    testimonials.forEach(t => {
+      const d = document.createElement('div'); d.className='test-card';
+      const stars = '★'.repeat(t.rating) + '☆'.repeat(5-t.rating);
+      d.innerHTML = `<div style="font-weight:800">${t.name} <span class="muted" style="font-weight:600">· ${t.role}</span></div><div style="margin-top:8px;color:#f5a623">${stars}</div><p class="muted" style="margin-top:8px">${t.text}</p>`;
+      testSlider.appendChild(d);
+    });
+    let tpos=0; setInterval(()=>{ tpos=(tpos+1)%Math.max(1,testSlider.children.length); testSlider.scrollTo({left:tpos*380,behavior:'smooth'}); },4500);
+
+    // FAQ accordion
+    document.querySelectorAll('.faq .qa').forEach(node=>{
+      const q = node.querySelector('.q'), a = node.querySelector('.a');
+      q.addEventListener('click', ()=>{ const open = a.style.display === 'block'; document.querySelectorAll('.faq .a').forEach(x=>x.style.display='none'); if(!open) a.style.display='block'; });
+    });
+
+    // counters animation
+    function animateCounters(){ document.querySelectorAll('.counter [data-count]').forEach(el=>{ const target=+el.dataset.count; let cur=0; const step=Math.max(1,Math.floor(target/80)); const int=setInterval(()=>{ cur+=step; if(cur>=target){ el.textContent=target; clearInterval(int);} else el.textContent=cur; },20); }); }
+    let started=false; window.addEventListener('scroll', ()=>{ const c=document.querySelector('.counters'); if(c && !started){ const r=c.getBoundingClientRect(); if(r.top<window.innerHeight-100){ animateCounters(); started=true; } } });
+
+    // newsletter
+    const nlForm = document.getElementById('newsletterForm'); if(nlForm) nlForm.addEventListener('submit', e=>{ e.preventDefault(); const em=document.getElementById('newsletterEmail').value; if(!em) return alert('Enter email'); alert('Subscribed: '+em); nlForm.reset(); });
+
+    // insurance quote form handling
+    const quoteForm = document.getElementById('quoteForm');
+    if (quoteForm){
+      quoteForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = document.getElementById('iName').value.trim();
+        const email = document.getElementById('iEmail').value.trim();
+        const phone = document.getElementById('iPhone').value.trim();
+        const type = document.getElementById('iType').value;
+        const msg = document.getElementById('iMsg').value.trim();
+        if (!name || !email || !phone){ alert('Please fill name, email and phone'); return; }
+        const digits = phone.replace(/[^0-9]/g,'');
+        if (digits.length < 10){ alert('Enter a valid phone number'); return; }
+        const defaultPhone = (window.BUSINESS_WHATSAPP || '+918448371753').toString().replace(/[^0-9]/g,'');
+        const message = `Insurance Quote Request:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AType: ${type}%0ADetails: ${msg}`;
+        if (!defaultPhone){ alert('WhatsApp not configured; form simulating submission.'); alert('Form data:\\n'+name+'\\n'+email+'\\n'+phone+'\\n'+type+'\\n'+msg); quoteForm.reset(); return; }
+        window.open('https://wa.me/'+defaultPhone+'?text='+encodeURIComponent(decodeURIComponent(message)),'_blank');
+        quoteForm.reset();
+      });
+    }
+
+    // openWhatsApp helper
+    function normalize(p){ return (p||'').toString().replace(/[^0-9]/g,''); }
+    window.openWhatsApp = function(service,pkg){
+      const phone = normalize(window.BUSINESS_WHATSAPP || '+918448371753');
+      let text = 'Hello True & Trust Consultancy Services.%0A'; if(service) text += 'Service: '+service + '%0A'; if(pkg) text += 'Package: '+pkg + '%0A'; text += 'I would like to enquire.';
+      if(!phone){ alert('WhatsApp number not configured'); return; }
+      window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(decodeURIComponent(text)),'_blank');
+    };
+    document.getElementById('floatWA').addEventListener('click', e=>{ e.preventDefault(); openWhatsApp('Quick Chat',''); });
+    document.getElementById('helpWidget') && document.getElementById('helpWidget').addEventListener('click', ()=>openWhatsApp('Quick Contact',''));
+
+  })();
+  </script>
+</body>
+</html>
