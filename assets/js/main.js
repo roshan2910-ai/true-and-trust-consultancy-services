@@ -52,7 +52,7 @@
   });
 })();
 
- <script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
   const slidesEl = document.querySelector('.slides');
   const slides = Array.from(document.querySelectorAll('.slide'));
@@ -111,3 +111,4 @@ document.addEventListener('DOMContentLoaded', function () {
   startAuto();
 });
 </script>
+
