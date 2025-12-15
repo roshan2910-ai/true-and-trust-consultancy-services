@@ -85,35 +85,32 @@
     .hamburger{display:block}
     header.site-header{padding:10px}
   }
-  
- /* BASIC HERO SLIDER STYLES */
-.hero-slider { position: relative; width: 100%; overflow: hidden; background:#f7fbff; }
-.slider-wrapper { position: relative; max-width:1200px; margin:0 auto; }
-.slides { display:flex; transition: transform 0.7s ease; will-change: transform; }
-.slide { min-width:100%; position:relative; box-sizing:border-box; display:flex; align-items:center; }
-.slide img { width:60%; height:auto; object-fit:cover; border-radius:12px; }
-.slide-content { width:40%; padding: 30px; }
-.slide-content h1 { font-size:2rem; margin:0 0 10px; color:#042a6b; }
-.slide-content p { margin:0 0 18px; color:#334155; }
-.btn { display:inline-block; background:#0b63d9; color:#fff; padding:10px 16px; border-radius:8px; text-decoration:none; margin-right:8px; }
-.btn.ghost { background:transparent; color:#0b63d9; border:1px solid #cfe2ff; }
 
-/* controls */
-.slider-prev, .slider-next { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:#fff; border:none; width:44px; height:44px; border-radius:50%; cursor:pointer; }
-.slider-prev { left:16px; } .slider-next { right:16px; }
+  /* ---------- HERO (full-screen slider) ---------- */
+  .hero-wrap{position:relative;margin-top:10px;border-radius:14px;overflow:hidden;min-height:calc(100vh - 160px);display:flex;align-items:center}
+  .hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,99,217,0.06),rgba(6,58,138,0.03));z-index:0}
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 420px;gap:28px;padding:48px;align-items:center}
+  @media(max-width:980px){ .hero-inner{grid-template-columns:1fr;padding:28px 18px} }
 
-/* dots */
-.dots { position:absolute; left:50%; transform:translateX(-50%); bottom:12px; display:flex; gap:8px; }
-.dots button { width:10px; height:10px; border-radius:50%; border:none; background:#cbd5e1; cursor:pointer; }
-.dots button.active { background:#0b63d9; }
+  .hero-left{max-width:780px}
+  .kicker{display:inline-block;background:rgba(11,99,217,0.08);color:var(--accent-2);padding:8px 12px;border-radius:999px;font-weight:800;margin-bottom:12px}
+  .hero-title{font-size:44px;line-height:1.02;margin:8px 0 14px;font-weight:900}
+  @media(max-width:980px){ .hero-title{font-size:28px} }
+  .hero-sub{color:var(--muted);font-size:16px;max-width:66ch;margin-bottom:18px}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
 
-/* responsive */
-@media (max-width:900px) {
-  .slide { flex-direction:column; text-align:center; }
-  .slide img { width:90%; margin-bottom:16px; }
-  .slide-content { width:100%; }
-}
-
+  /* slider visuals */
+  .hero-slider{position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#fff,#f7fbff);box-shadow:var(--card-shadow);border:1px solid rgba(10,30,80,0.03)}
+  .slides{display:flex;transition:transform .8s cubic-bezier(.2,.9,.2,1)}
+  .slide{min-width:100%;display:flex;gap:16px;align-items:center;padding:22px}
+  .slide .content{flex:1}
+  .slide .visual{flex:0 0 420px;display:flex;align-items:center;justify-content:center}
+  .visual .imgbox{width:100%;height:280px;border-radius:12px;background:linear-gradient(135deg,#eaf4ff,#fff);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--accent-2)}
+  .slide h3{margin:0 0 8px;font-size:20px}
+  .slide p{margin:0;color:var(--muted)}
+  .slider-controls{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;display:flex;gap:8px}
+  .dot{width:12px;height:12px;border-radius:50%;background:rgba(10,20,40,0.08);cursor:pointer}
+  .dot.active{background:var(--accent)}
 
   /* ---------- SERVICES GRID ---------- */
   .services{margin-top:28px}
@@ -212,7 +209,7 @@
   <div class="container">
     <header class="site-header" id="siteHeader" role="banner" aria-label="Top navigation">
       <div class="brand" aria-hidden="false">
-        <img src="/assets/img/logo.png" alt="True & Trust logo" class="logo"/>
+        <img src="/assets/img/logo.png" alt="True & Trust logo" class="logo"/ loading="lazy">
         <div>
           <div class="title">True & Trust Consultancy Services</div>
           <div class="sub muted">Pan-India • Launched Jan 2025</div>
@@ -229,6 +226,7 @@
               <a href="/advocate.html">Advocate & Legal</a>
               <a href="/insurance.html">Insurance Services</a>
               <a href="/loan.html">Loan Services</a>
+              <a href="/accounting.html">Accounting & Bookkeeping</a>
             </div>
           </div>
           <a class="nav-link" href="/pricing.html">Pricing</a>
@@ -285,54 +283,54 @@
 
       <div class="hero-slider" aria-hidden="false">
         <div class="slides" id="slides" style="transform:translateX(0%)">
-          <!-- HERO SLIDER -->
-<section class="hero-slider" aria-label="Hero slider">
-  <div class="slider-wrapper">
-    <div class="slides">
-      <div class="slide">
-        <img src="assets/img/hero2.jpg" alt="Tax & GST" loading="lazy">
-        <div class="slide-content">
-          <h1>Smart GST, ITR & Compliance</h1>
-          <p>Trusted CA, Legal, Insurance & Loan advisors — Pan-India support.</p>
-          <div class="cta">
-            <a class="btn" href="/services.html">Explore Services</a>
-            <a class="btn ghost" href="/contact.html">Contact Us</a>
+          <!-- Slide 1: Tax & Compliance -->
+          <div class="slide" role="group" aria-label="Smart GST and ITR">
+            <div class="content">
+              <h3>Smart GST, ITR & Compliance Solutions</h3>
+              <p class="muted">From GST registration to monthly reconciliation and ITR filing — our expert CA team keeps your business compliant and audit-ready.</p>
+              <div style="margin-top:12px"><button class="btn" onclick="location.href='/services.html#tax'">Explore Tax Services</button></div>
+            </div>
+            <div class="visual">
+              <div class="imgbox"><img src="/assets/img/hero.jpg" alt="Tax & GST" onerror="this.style.display='none'" loading="lazy"></div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Legal / Advocate -->
+          <div class="slide" role="group" aria-label="Legal services and representation">
+            <div class="content">
+              <h3>Trusted Legal & Advocate Support</h3>
+              <p class="muted">Book advocate consultations, contract drafting, representation and corporate legal advisory with experienced lawyers.</p>
+              <div style="margin-top:12px"><button class="btn" onclick="location.href='/advocate.html'">Book Advocate Consult</button></div>
+            </div>
+            <div class="visual">
+              <div class="imgbox"><img src="/assets/img/hero-legal.jpg" alt="Legal & Advocate" onerror="this.style.display='none'" loading="lazy"></div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Insurance & Loans -->
+          <div class="slide" role="group" aria-label="Insurance and loan advisory">
+            <div class="content">
+              <h3>Insurance & Loan Guidance — Fast Approvals</h3>
+              <p class="muted">Compare policies, get claim assistance or check loan eligibility with dedicated advisors and lender partnerships.</p>
+              <div style="margin-top:12px"><button class="btn" onclick="location.href='/insurance.html'">Compare Policies</button></div>
+            </div>
+            <div class="visual">
+              <div class="imgbox"><img src="/assets/img/hero-loan.jpg" alt="Insurance & Loans" onerror="this.style.display='none'" loading="lazy"></div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Business Advisory (optional) -->
+          <div class="slide" role="group" aria-label="Business advisory">
+            <div class="content">
+              <h3>Business Advisory & Startup Support</h3>
+              <p class="muted">Company formation, startup legal structuring and ongoing advisory to scale with confidence.</p>
+              <div style="margin-top:12px"><button class="btn" onclick="location.href='/services.html#startup'">Startup Support</button></div>
+            </div>
+            <div class="visual">
+              <div class="imgbox"><img src="/assets/img/hero-business.jpg" alt="Business Advisory" onerror="this.style.display='none'" loading="lazy"></div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="slide">
-        <img src="assets/img/hero4.jpg" alt="Advocate Services" loading="lazy">
-        <div class="slide-content">
-          <h1>Expert Advocate Support</h1>
-          <p>Corporate & civil matters — representation & drafting.</p>
-          <div class="cta">
-            <a class="btn" href="/advocate.html">Book Consult</a>
-            <a class="btn ghost" href="/contact.html">Contact</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="assets/img/hero3.jpg" alt="Insurance & Loan" loading="lazy">
-        <div class="slide-content">
-          <h1>Insurance & Loan Assistance</h1>
-          <p>Policy comparison, claims help and fast loan processing.</p>
-          <div class="cta">
-            <a class="btn" href="/insurance.html">Compare Policies</a>
-            <a class="btn ghost" href="/loan.html">Check Eligibility</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <button class="slider-prev" aria-label="Previous slide">‹</button>
-    <button class="slider-next" aria-label="Next slide">›</button>
-
-    <div class="dots" aria-hidden="false"></div>
-  </div>
-</section>
-
 
         <!-- controls -->
         <div class="slider-controls" id="sliderControls" role="tablist">
@@ -786,22 +784,22 @@
       <h3>Latest Insights</h3>
       <div class="blog-grid">
         <article class="blog-card">
-          <img src="/assets/img/blog-1.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px">
+          <img src="/assets/img/blog-1.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px" loading="lazy">
           <h4 style="margin-top:8px">How to File ITR for Freelancers</h4>
           <p class="muted">Step-by-step guide for income declaration, deductions and tax-saving tips.</p>
         </article>
         <article class="blog-card">
-          <img src="/assets/img/blog-2.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px">
+          <img src="/assets/img/blog-2.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px" loading="lazy">
           <h4 style="margin-top:8px">GST Registration Checklist</h4>
           <p class="muted">Documents required and common mistakes to avoid during GST onboarding.</p>
         </article>
         <article class="blog-card">
-          <img src="/assets/img/blog-3.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px">
+          <img src="/assets/img/blog-3.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px" loading="lazy">
           <h4 style="margin-top:8px">Choosing the Right Business Insurance</h4>
           <p class="muted">Compare policies for SMEs and what to watch in the fine print.</p>
         </article>
         <article class="blog-card">
-          <img src="/assets/img/blog-4.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px">
+          <img src="/assets/img/blog-4.jpg" alt="blog" style="height:140px;object-fit:cover;border-radius:8px" loading="lazy">
           <h4 style="margin-top:8px">Loan Eligibility: Documents Checklist</h4>
           <p class="muted">Prepare faster disbursals by having complete documentation ready.</p>
         </article>
@@ -860,7 +858,7 @@
       <div class="container">
         <div class="footer-grid">
           <div>
-            <img src="/assets/img/logo.png" alt="logo" style="height:56px;width:56px;border-radius:8px;object-fit:cover" />
+            <img src="/assets/img/logo.png" alt="logo" style="height:56px;width:56px;border-radius:8px;object-fit:cover" / loading="lazy">
             <div style="font-weight:900;margin-top:8px">True & Trust Consultancy</div>
             <div class="muted" style="margin-top:6px">Mayur Vihar Phase 1, Patparganj, Delhi - 110091</div>
             <div class="muted" style="margin-top:6px">Email: support@trueandtrustconsultancyservices.in</div>
@@ -939,7 +937,7 @@
     });
 
     /* ---------- hero slider ---------- */
-    const slides = document.getElementById('slides');
+    const slides = document.getElementById('slides'); if(!slides){return;}
     const dots = Array.from(document.querySelectorAll('.dot'));
     let idx = 0, slideCount = slides.children.length, sliderInterval = null;
     function go(i){
@@ -984,7 +982,7 @@
       div.className = 'pkg-card';
       div.style.minWidth = '260px';
       div.innerHTML = `
-        <div style="height:120px;overflow:hidden;border-radius:8px;background:#f7fbff"><img src="${item.img}" alt="${item.title}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+        <div style="height:120px;overflow:hidden;border-radius:8px;background:#f7fbff"><img src="${item.img}" alt="${item.title}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'" loading="lazy"></div>
         <div style="font-weight:800;margin-top:8px">${item.title}</div>
         <div style="color:var(--muted);margin-top:6px">${item.desc}</div>
         <div style="font-weight:900;color:var(--accent-2);margin-top:8px">₹${item.price}</div>
@@ -1096,27 +1094,7 @@
       }
     });
 
-    /* ---------- populate service package rows (reuse earlier demo items) ---------- */
-    function appendTo(containerId, items){
-      const cont = document.getElementById(containerId);
-      if (!cont) return;
-      items.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'pkg-card';
-        card.style.minWidth = '260px';
-        card.innerHTML = `<div style="height:120px;overflow:hidden;border-radius:8px;background:#f7fbff"><img src="${item.img}" alt="${item.title}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-          <div style="font-weight:800;margin-top:8px">${item.title}</div>
-          <div style="color:var(--muted);margin-top:6px">${item.desc}</div>
-          <div style="font-weight:900;color:var(--accent-2);margin-top:8px">₹${item.price}</div>
-          <div style="margin-top:8px;display:flex;gap:8px"><button class="btn" onclick="openWhatsApp('${item.title}','Buy')">Buy</button><button class="btn secondary" onclick="location.href='/contact.html'">Contact</button></div>`;
-        cont.appendChild(card);
-      });
-    }
-    appendTo('cards-ca', demo.ca);
-    appendTo('cards-adv', demo.adv);
-    appendTo('cards-ins', demo.ins);
-    appendTo('cards-loan', demo.loan);
-
+    
     /* ---------- newsletter form ---------- */
     const nlForm = document.getElementById('newsletterForm');
     if (nlForm){
@@ -1156,5 +1134,51 @@
   </script>
 
   <!-- End -->
+<script>
+// ===== Slider Stability Enhancements =====
+document.addEventListener('DOMContentLoaded', function(){
+  const slider = document.getElementById('slides');
+  if(!slider) return;
+
+  let autoTimer = null;
+  const AUTO_MS = 5000;
+  const startAuto = ()=> autoTimer = setInterval(()=> window.move && window.move(1), AUTO_MS);
+  const stopAuto = ()=> autoTimer && clearInterval(autoTimer);
+
+  slider.addEventListener('mouseenter', stopAuto);
+  slider.addEventListener('mouseleave', ()=>{ stopAuto(); startAuto(); });
+
+  // Swipe support
+  let startX = 0;
+  slider.addEventListener('touchstart', e=> startX = e.touches[0].clientX, {passive:true});
+  slider.addEventListener('touchend', e=>{
+    const dx = e.changedTouches[0].clientX - startX;
+    if(Math.abs(dx) > 40){ window.move && window.move(dx<0?1:-1); }
+  });
+
+  // Image error fallback (hide broken images gracefully)
+  slider.querySelectorAll('img').forEach(img=>{
+    img.onerror = ()=> img.style.display='none';
+  });
+
+  startAuto();
+});
+</script>
+
+<!-- ===== Expert Bhai Floating Chat ===== -->
+<div class="expert-bhai">
+  <div class="expert-box">
+    <h4>Expert Bhai 🤝</h4>
+    <p>Select service to chat:</p>
+    <a href="#" class="eb-link" data-service="CA Services">📊 CA / GST / ITR</a>
+    <a href="#" class="eb-link" data-service="Advocate Services">⚖️ Advocate</a>
+    <a href="#" class="eb-link" data-service="Insurance Services">🛡️ Insurance</a>
+    <a href="#" class="eb-link" data-service="Loan Services">💰 Loans</a>
+    <a href="tel:+91XXXXXXXXXX">📞 Call</a>
+    <a href="mailto:support@trueandtrustconsultancyservices.in">📧 Email</a>
+  </div>
+  <div class="expert-toggle" aria-label="Open chat">💬</div>
+</div>
+
 </body>
 </html>
