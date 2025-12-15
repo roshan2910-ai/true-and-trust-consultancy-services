@@ -87,7 +87,7 @@
   }
   
  /* BASIC HERO SLIDER STYLES */
-.hero-slider { position: relative; width: 100%; overflow: hidden; background:#f7fbff; }
+.hero-slider { position: relative; width: 100%; overflow: hidden; }
 .slider-wrapper { position: relative; max-width:1200px; margin:0 auto; }
 .slides { display:flex; transition: transform 0.7s ease; will-change: transform; }
 .slide { min-width:100%; position:relative; box-sizing:border-box; display:flex; align-items:center; }
@@ -284,6 +284,7 @@
 
       <div class="hero-slider" aria-hidden="false">
         <div class="slides" id="slides" style="transform:translateX(0%)">
+         
           <!-- HERO SLIDER -->
 <section class="hero-slider" aria-label="Hero slider">
   <div class="slider-wrapper">
@@ -300,6 +301,9 @@
         </div>
       </div>
 
+<section class="hero-slider" aria-label="Hero slider">
+  <div class="slider-wrapper">
+    <div class="slides">
       <div class="slide">
         <img src="assets/img/hero4.jpg" alt="Advocate Services" loading="lazy">
         <div class="slide-content">
