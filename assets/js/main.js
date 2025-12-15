@@ -51,64 +51,20 @@
     loadParts().then(()=>setTimeout(wireActions,150));
   });
 })();
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const slidesEl = document.querySelector('.slides');
-  const slides = Array.from(document.querySelectorAll('.slide'));
-  const nextBtn = document.querySelector('.slider-next');
-  const prevBtn = document.querySelector('.slider-prev');
-  const dotsContainer = document.querySelector('.dots');
-
-  if (!slidesEl || slides.length === 0) return;
-
-  let idx = 0;
-  const total = slides.length;
-  let interval = null;
-  const AUTO_DELAY = 5000;
-
-  // create dots
-  slides.forEach((_, i) => {
-    const btn = document.createElement('button');
-    btn.dataset.index = i;
-    if (i === 0) btn.classList.add('active');
-    dotsContainer.appendChild(btn);
+// ===== Expert Bhai Logic + WhatsApp Auto Message =====
+(function(){
+  const toggle=document.querySelector('.expert-toggle');
+  const box=document.querySelector('.expert-box');
+  if(toggle && box){
+    toggle.onclick=()=> box.style.display = box.style.display==='block'?'none':'block';
+  }
+  const phone='91XXXXXXXXXX';
+  document.querySelectorAll('.eb-link').forEach(a=>{
+    a.addEventListener('click', e=>{
+      e.preventDefault();
+      const service=a.dataset.service||'General Enquiry';
+      const msg=encodeURIComponent('Hello Expert Bhai, I need help with '+service+'.');
+      window.open('https://wa.me/'+phone+'?text='+msg,'_blank');
+    });
   });
-
-  const dots = Array.from(dotsContainer.children);
-
-  function goTo(n) {
-    idx = ((n % total) + total) % total;
-    slidesEl.style.transform = `translateX(-${idx * 100}%)`;
-    dots.forEach(d => d.classList.remove('active'));
-    dots[idx].classList.add('active');
-  }
-
-  function next() { goTo(idx + 1); }
-  function prev() { goTo(idx - 1); }
-
-  nextBtn.addEventListener('click', () => { next(); resetAuto(); });
-  prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
-
-  dots.forEach(d => d.addEventListener('click', e => {
-    goTo(parseInt(e.target.dataset.index, 10)); resetAuto();
-  }));
-
-  // auto play
-  function startAuto() {
-    interval = setInterval(next, AUTO_DELAY);
-  }
-  function stopAuto() { clearInterval(interval); interval = null; }
-  function resetAuto() { stopAuto(); startAuto(); }
-
-  // pause on hover
-  const wrapper = document.querySelector('.slider-wrapper');
-  wrapper.addEventListener('mouseenter', stopAuto);
-  wrapper.addEventListener('mouseleave', startAuto);
-
-  // start
-  goTo(0);
-  startAuto();
-});
-</script>
-
+})();
