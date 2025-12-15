@@ -285,51 +285,47 @@
 
       <div class="hero-slider" aria-hidden="false">
         <div class="slides" id="slides" style="transform:translateX(0%)">
-          <!-- HERO SLIDER -->
+         
+          <!-- ========== HERO SLIDER ========== -->
 <section class="hero-slider" aria-label="Hero slider">
   <div class="slider-wrapper">
-    <div class="slides">
+
+    <div class="slides" id="heroSlides">
       <div class="slide">
-        <img src="assets/img/hero2.jpg" alt="Tax & GST" loading="lazy">
+        <img src="/assets/img/hero2.jpg" alt="Tax & GST" onerror="this.src='https://via.placeholder.com/600x400'">
         <div class="slide-content">
           <h1>Smart GST, ITR & Compliance</h1>
-          <p>Trusted CA, Legal, Insurance & Loan advisors — Pan-India support.</p>
-          <div class="cta">
-            <a class="btn" href="/services.html">Explore Services</a>
-            <a class="btn ghost" href="/contact.html">Contact Us</a>
-          </div>
+          <p>Trusted CA, Legal, Insurance & Loan advisors — Pan-India.</p>
+          <a class="btn" href="/services.html">Explore Services</a>
         </div>
       </div>
 
       <div class="slide">
-        <img src="assets/img/hero4.jpg" alt="Advocate Services" loading="lazy">
+        <img src="/assets/img/hero4.jpg" alt="Advocate Services" onerror="this.src='https://via.placeholder.com/600x400'">
         <div class="slide-content">
           <h1>Expert Advocate Support</h1>
-          <p>Corporate & civil matters — representation & drafting.</p>
-          <div class="cta">
-            <a class="btn" href="/advocate.html">Book Consult</a>
-            <a class="btn ghost" href="/contact.html">Contact</a>
-          </div>
+          <p>Civil, criminal & corporate legal services.</p>
+          <a class="btn" href="/advocate.html">Book Consult</a>
         </div>
       </div>
 
       <div class="slide">
-        <img src="assets/img/hero3.jpg" alt="Insurance & Loan" loading="lazy">
+        <img src="/assets/img/hero3.jpg" alt="Insurance & Loan" onerror="this.src='https://via.placeholder.com/600x400'">
         <div class="slide-content">
           <h1>Insurance & Loan Assistance</h1>
-          <p>Policy comparison, claims help and fast loan processing.</p>
-          <div class="cta">
-            <a class="btn" href="/insurance.html">Compare Policies</a>
-            <a class="btn ghost" href="/loan.html">Check Eligibility</a>
-          </div>
+          <p>Compare policies & get fast loan processing.</p>
+          <a class="btn" href="/insurance.html">Compare Now</a>
         </div>
       </div>
     </div>
 
-    <button class="slider-prev" aria-label="Previous slide">‹</button>
-    <button class="slider-next" aria-label="Next slide">›</button>
+    <!-- Controls -->
+    <button class="slider-prev" id="prevBtn">‹</button>
+    <button class="slider-next" id="nextBtn">›</button>
 
-    <div class="dots" aria-hidden="false"></div>
+    <!-- Dots -->
+    <div class="dots" id="heroDots"></div>
+
   </div>
 </section>
 
