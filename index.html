@@ -1,4 +1,4 @@
-<!doctype html>
+v<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -285,41 +285,51 @@
 
       <div class="hero-slider" aria-hidden="false">
         <div class="slides" id="slides" style="transform:translateX(0%)">
-         
-          <section class="hero-slider">
+          <!-- HERO SLIDER -->
+<section class="hero-slider" aria-label="Hero slider">
   <div class="slider-wrapper">
-
-    <div class="slides" id="slides">
+    <div class="slides">
       <div class="slide">
-        <img src="/assets/img/hero2.jpg" alt="GST" onerror="this.src='https://via.placeholder.com/600x400'">
+        <img src="assets/img/hero2.jpg" alt="Tax & GST" loading="lazy">
         <div class="slide-content">
           <h1>Smart GST, ITR & Compliance</h1>
-          <p>Trusted CA, Legal, Insurance & Loan advisors.</p>
+          <p>Trusted CA, Legal, Insurance & Loan advisors — Pan-India support.</p>
+          <div class="cta">
+            <a class="btn" href="/services.html">Explore Services</a>
+            <a class="btn ghost" href="/contact.html">Contact Us</a>
+          </div>
         </div>
       </div>
 
       <div class="slide">
-        <img src="/assets/img/hero4.jpg" alt="Legal" onerror="this.src='https://via.placeholder.com/600x400'">
+        <img src="assets/img/hero4.jpg" alt="Advocate Services" loading="lazy">
         <div class="slide-content">
           <h1>Expert Advocate Support</h1>
-          <p>Corporate & civil legal solutions.</p>
+          <p>Corporate & civil matters — representation & drafting.</p>
+          <div class="cta">
+            <a class="btn" href="/advocate.html">Book Consult</a>
+            <a class="btn ghost" href="/contact.html">Contact</a>
+          </div>
         </div>
       </div>
 
       <div class="slide">
-        <img src="/assets/img/hero3.jpg" alt="Loan" onerror="this.src='https://via.placeholder.com/600x400'">
+        <img src="assets/img/hero3.jpg" alt="Insurance & Loan" loading="lazy">
         <div class="slide-content">
           <h1>Insurance & Loan Assistance</h1>
-          <p>Compare policies & get fast loans.</p>
+          <p>Policy comparison, claims help and fast loan processing.</p>
+          <div class="cta">
+            <a class="btn" href="/insurance.html">Compare Policies</a>
+            <a class="btn ghost" href="/loan.html">Check Eligibility</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <button class="slider-prev" id="prevBtn">‹</button>
-    <button class="slider-next" id="nextBtn">›</button>
+    <button class="slider-prev" aria-label="Previous slide">‹</button>
+    <button class="slider-next" aria-label="Next slide">›</button>
 
-    <div class="dots" id="dots"></div>
-
+    <div class="dots" aria-hidden="false"></div>
   </div>
 </section>
 
@@ -928,33 +938,25 @@
       if (!mobilePanel.contains(e.target) && e.target.id !== 'hamburgerBtn') mobilePanel.style.display = 'none';
     });
 
-    <script>
-const slides=document.getElementById("slides");
-const total=slides.children.length;
-const dots=document.getElementById("dots");
-let index=0,timer;
-
-for(let i=0;i<total;i++){
-  const b=document.createElement("button");
-  b.onclick=()=>go(i);
-  dots.appendChild(b);
-}
-function updateDots(){
-  [...dots.children].forEach((d,i)=>d.classList.toggle("active",i===index));
-}
-function go(i){
-  index=(i+total)%total;
-  slides.style.transform=`translateX(-${index*100}%)`;
-  updateDots();
-}
-document.getElementById("next").onclick=()=>go(index+1);
-document.getElementById("prev").onclick=()=>go(index-1);
-function start(){timer=setInterval(()=>go(index+1),5000)}
-function stop(){clearInterval(timer)}
-slides.parentElement.onmouseenter=stop;
-slides.parentElement.onmouseleave=start;
-go(0);start();
-</script>
+    /* ---------- hero slider ---------- */
+    const slides = document.getElementById('slides');
+    const dots = Array.from(document.querySelectorAll('.dot'));
+    let idx = 0, slideCount = slides.children.length, sliderInterval = null;
+    function go(i){
+      idx = (i + slideCount) % slideCount;
+      slides.style.transform = 'translateX(-' + (idx*100) + '%)';
+      dots.forEach((d,di)=>{ d.classList.toggle('active', di===idx); d.setAttribute('aria-pressed', di===idx?'true':'false')});
+    }
+    function next(){ go(idx+1); }
+    dots.forEach(d => d.addEventListener('click', ()=>{ stop(); go(Number(d.dataset.index)); start(); }));
+    function start(){ sliderInterval = setInterval(next, 5500); }
+    function stop(){ if (sliderInterval) { clearInterval(sliderInterval); sliderInterval = null; } }
+    start();
+    // pause on hover
+    document.querySelectorAll('.hero-slider').forEach(el=>{
+      el.addEventListener('mouseenter', stop);
+      el.addEventListener('mouseleave', start);
+    });
 
     /* ---------- service rows: demo data populated --------- */
     const demo = {
@@ -998,6 +1000,7 @@ go(0);start();
         demo[key].forEach(item => container.appendChild(mkPackageCard(item)));
       });
     }
+    populateServiceRows();
 
     /* ---------- testimonials (auto-populate) --------- */
     const testSlider = document.getElementById('testSlider');
@@ -1155,3 +1158,4 @@ go(0);start();
   <!-- End -->
 </body>
 </html>
+
