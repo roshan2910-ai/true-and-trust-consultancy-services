@@ -53,62 +53,54 @@
 })();
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const slidesEl = document.querySelector('.slides');
-  const slides = Array.from(document.querySelectorAll('.slide'));
-  const nextBtn = document.querySelector('.slider-next');
-  const prevBtn = document.querySelector('.slider-prev');
-  const dotsContainer = document.querySelector('.dots');
+(function () {
+  const slides = document.getElementById("heroSlides");
+  const slideItems = slides.children;
+  const dotsWrap = document.getElementById("heroDots");
+  const prev = document.getElementById("prevBtn");
+  const next = document.getElementById("nextBtn");
 
-  if (!slidesEl || slides.length === 0) return;
+  let index = 0;
+  let total = slideItems.length;
+  let timer;
 
-  let idx = 0;
-  const total = slides.length;
-  let interval = null;
-  const AUTO_DELAY = 5000;
-
-  // create dots
-  slides.forEach((_, i) => {
-    const btn = document.createElement('button');
-    btn.dataset.index = i;
-    if (i === 0) btn.classList.add('active');
-    dotsContainer.appendChild(btn);
-  });
-
-  const dots = Array.from(dotsContainer.children);
-
-  function goTo(n) {
-    idx = ((n % total) + total) % total;
-    slidesEl.style.transform = `translateX(-${idx * 100}%)`;
-    dots.forEach(d => d.classList.remove('active'));
-    dots[idx].classList.add('active');
+  // Create dots
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement("button");
+    d.onclick = () => go(i);
+    dotsWrap.appendChild(d);
   }
 
-  function next() { goTo(idx + 1); }
-  function prev() { goTo(idx - 1); }
-
-  nextBtn.addEventListener('click', () => { next(); resetAuto(); });
-  prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
-
-  dots.forEach(d => d.addEventListener('click', e => {
-    goTo(parseInt(e.target.dataset.index, 10)); resetAuto();
-  }));
-
-  // auto play
-  function startAuto() {
-    interval = setInterval(next, AUTO_DELAY);
+  function updateDots() {
+    [...dotsWrap.children].forEach((d, i) =>
+      d.classList.toggle("active", i === index)
+    );
   }
-  function stopAuto() { clearInterval(interval); interval = null; }
-  function resetAuto() { stopAuto(); startAuto(); }
 
-  // pause on hover
-  const wrapper = document.querySelector('.slider-wrapper');
-  wrapper.addEventListener('mouseenter', stopAuto);
-  wrapper.addEventListener('mouseleave', startAuto);
+  function go(i) {
+    index = (i + total) % total;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    updateDots();
+  }
 
-  // start
-  goTo(0);
-  startAuto();
-});
+  function nextSlide() { go(index + 1); }
+  function prevSlide() { go(index - 1); }
+
+  next.onclick = nextSlide;
+  prev.onclick = prevSlide;
+
+  function start() {
+    timer = setInterval(nextSlide, 5000);
+  }
+
+  function stop() {
+    clearInterval(timer);
+  }
+
+  slides.parentElement.onmouseenter = stop;
+  slides.parentElement.onmouseleave = start;
+
+  go(0);
+  start();
+})();
 </script>
-
