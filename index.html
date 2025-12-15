@@ -935,58 +935,32 @@
     });
 
     <script>
-(function () {
-  const slides = document.getElementById("heroSlides");
-  const slideItems = slides.children;
-  const dotsWrap = document.getElementById("heroDots");
-  const prev = document.getElementById("prevBtn");
-  const next = document.getElementById("nextBtn");
+const slides=document.getElementById("slides");
+const total=slides.children.length;
+const dots=document.getElementById("dots");
+let index=0,timer;
 
-  let index = 0;
-  let total = slideItems.length;
-  let timer;
-
-  // Create dots
-  for (let i = 0; i < total; i++) {
-    const d = document.createElement("button");
-    d.onclick = () => go(i);
-    dotsWrap.appendChild(d);
-  }
-
-  function updateDots() {
-    [...dotsWrap.children].forEach((d, i) =>
-      d.classList.toggle("active", i === index)
-    );
-  }
-
-  function go(i) {
-    index = (i + total) % total;
-    slides.style.transform = `translateX(-${index * 100}%)`;
-    updateDots();
-  }
-
-  function nextSlide() { go(index + 1); }
-  function prevSlide() { go(index - 1); }
-
-  next.onclick = nextSlide;
-  prev.onclick = prevSlide;
-
-  function start() {
-    timer = setInterval(nextSlide, 5000);
-  }
-
-  function stop() {
-    clearInterval(timer);
-  }
-
-  slides.parentElement.onmouseenter = stop;
-  slides.parentElement.onmouseleave = start;
-
-  go(0);
-  start();
-})();
+for(let i=0;i<total;i++){
+  const b=document.createElement("button");
+  b.onclick=()=>go(i);
+  dots.appendChild(b);
+}
+function updateDots(){
+  [...dots.children].forEach((d,i)=>d.classList.toggle("active",i===index));
+}
+function go(i){
+  index=(i+total)%total;
+  slides.style.transform=`translateX(-${index*100}%)`;
+  updateDots();
+}
+document.getElementById("next").onclick=()=>go(index+1);
+document.getElementById("prev").onclick=()=>go(index-1);
+function start(){timer=setInterval(()=>go(index+1),5000)}
+function stop(){clearInterval(timer)}
+slides.parentElement.onmouseenter=stop;
+slides.parentElement.onmouseleave=start;
+go(0);start();
 </script>
-
 
     /* ---------- service rows: demo data populated --------- */
     const demo = {
@@ -1030,7 +1004,6 @@
         demo[key].forEach(item => container.appendChild(mkPackageCard(item)));
       });
     }
-    populateServiceRows();
 
     /* ---------- testimonials (auto-populate) --------- */
     const testSlider = document.getElementById('testSlider');
